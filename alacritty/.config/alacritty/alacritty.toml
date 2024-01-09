@@ -1,0 +1,30 @@
+import = [
+    "~/.config/alacritty/themes/themes/{catppuccin_mocha}.toml"
+]
+
+[window]
+
+opacity = 0.6
+
+padding.x = 8
+padding.y = 8
+
+decorations = "Full"
+
+blur = true
+
+startup_mode = "Windowed"
+
+[font]
+
+normal.family = "BlexMono NF"
+
+size = 14.0
+
+[cursor]
+
+style.blinking = "On"
+
+[mouse]
+
+hide_when_typing = true

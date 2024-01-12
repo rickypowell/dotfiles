@@ -54,3 +54,8 @@ vim.keymap.set("n", "<C-j>", "<cmd>resize +" .. INT_RESIZE .. "<cr>", { desc = "
 vim.keymap.set("n", "<C-h>", "<cmd>vertical resize +" .. INT_RESIZE .. "<cr>", { desc = "Increase current window width" })
 vim.keymap.set("n", "<C-l>", "<cmd>vertical resize -" .. INT_RESIZE .. "<cr>", { desc = "Decrease current Increase rent window width" })
 
+-- Scrolling
+-- while scrolling up/down, keep the current highlighted line centered horizontally
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center" })
+

@@ -15,5 +15,5 @@ stow --restow alacritty
 # Alacritty themes
 # We use Alacritty's default Linux config directory as our storage location here.
 mkdir -p alacritty/.config/alacritty/themes
-git clone https://github.com/alacritty/alacritty-theme alacritty/config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme alacritty/.config/alacritty/themes
 

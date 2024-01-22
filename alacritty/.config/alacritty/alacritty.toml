@@ -4,14 +4,15 @@ import = [
 
 [window]
 
-opacity = 0.6
+opacity = 0.95
 
 padding.x = 8
 padding.y = 8
 
 decorations = "Full"
 
-blur = true
+# not working on M1 mac
+# blur = true
 
 startup_mode = "Windowed"
 
@@ -19,7 +20,7 @@ startup_mode = "Windowed"
 
 normal.family = "BlexMono NF"
 
-size = 14.0
+size = 12.0
 
 [cursor]
 

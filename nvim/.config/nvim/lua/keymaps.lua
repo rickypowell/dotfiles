@@ -59,3 +59,7 @@ vim.keymap.set("n", "<C-l>", "<cmd>vertical resize -" .. INT_RESIZE .. "<cr>", {
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center" })
 
+-- Git
+-- lookup git history for current file in buffer in a quickfix list with a Fugitive command
+-- use commands ":cn" (next) and ":cp" (previous) to navigate the list
+vim.keymap.set("n", "<leader>Gh", "<cmd>0Gclog<cr>", { desc = "Git history for current file" })

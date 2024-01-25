@@ -15,6 +15,7 @@ return {
         "query",
         "rust",
         "typescript",
+        "tsx",
         "javascript",
         "html",
         "swift",

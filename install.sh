@@ -7,10 +7,13 @@ brew install starship
 brew install nvim
 # Install ripgrep for grep search in Telescope
 brew install ripgrep
+# Zellij install
+brew install zellij
 
 stow --restow starship
 stow --restow nvim
 stow --restow alacritty
+stow --restow zellij
 
 # Alacritty themes
 # We use Alacritty's default Linux config directory as our storage location here.

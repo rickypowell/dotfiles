@@ -22,3 +22,7 @@ vim.opt.laststatus = 3
 
 -- True colors
 vim.opt.termguicolors = true
+
+-- Code folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

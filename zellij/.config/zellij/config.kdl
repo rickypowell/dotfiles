@@ -1,2 +1,12 @@
 theme "catppuccin-mocha"
 
+keybinds {
+    normal {
+        unbind "Ctrl p"
+        bind "Ctrl a" { SwitchToMode "pane"; }
+
+        unbind "Ctrl n"
+        bind "Ctrl b" { SwitchToMode "resize"; }
+    }
+}
+

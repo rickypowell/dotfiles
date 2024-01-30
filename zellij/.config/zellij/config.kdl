@@ -7,6 +7,9 @@ keybinds {
 
         unbind "Ctrl n"
         bind "Ctrl b" { SwitchToMode "resize"; }
+
+        unbind "Ctrl o"
+        bind "Ctrl s" { SwitchToMode "session"; }
     }
 }
 

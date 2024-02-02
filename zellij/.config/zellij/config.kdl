@@ -1,15 +1,14 @@
 theme "catppuccin-mocha"
 
 keybinds {
-    normal {
-        unbind "Ctrl p"
-        bind "Ctrl y" { SwitchToMode "pane"; }
+    # Global re-binds
+    unbind "Ctrl p"
+    bind "Ctrl y" { SwitchToMode "pane"; }
 
-        unbind "Ctrl n"
-        bind "Ctrl b" { SwitchToMode "resize"; }
+    unbind "Ctrl n"
+    bind "Ctrl b" { SwitchToMode "resize"; }
 
-        unbind "Ctrl o"
-        bind "Ctrl s" { SwitchToMode "session"; }
-    }
+    unbind "Ctrl o"
+    bind "Ctrl s" { SwitchToMode "session"; }
 }
 

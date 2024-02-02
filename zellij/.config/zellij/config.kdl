@@ -1,7 +1,7 @@
 theme "catppuccin-mocha"
 
 keybinds {
-    # Global re-binds
+    // Global re-binds
     unbind "Ctrl p"
     bind "Ctrl y" { SwitchToMode "pane"; }
 

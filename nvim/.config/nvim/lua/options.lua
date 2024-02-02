@@ -25,4 +25,5 @@ vim.opt.termguicolors = true
 
 -- Code folding
 vim.opt.foldmethod = "expr"
+vim.opt.foldlevelstart = 99
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

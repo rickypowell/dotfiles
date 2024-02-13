@@ -12,6 +12,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.cursorline = true
+vim.opt.guicursor = "n-v-c-sm:block-blinkwait175-blinkon175,i-ci-ve:ver25,r-cr-o:hor20"
 vim.opt.winbar = "%=%m %f"
 vim.opt.number = true
 vim.opt.relativenumber = false

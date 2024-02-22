@@ -25,7 +25,11 @@ require("autocmd")
 -- setup with Lazy.nvim
 require("lazy").setup(
   "plugins",
-  {}
+  {
+    ui = {
+      border = "rounded",
+    },
+  }
 )
 
 -- settings

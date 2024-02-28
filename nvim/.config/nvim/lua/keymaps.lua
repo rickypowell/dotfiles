@@ -7,6 +7,16 @@
 
 vim.keymap.set("n", "<leader>e", "<cmd>Ex<cr>", { desc = "Open file explorer" })
 
+-- Session with persistence plugin
+-- restore the session for the current directory
+vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], { desc = "Restore session from current directory" })
+
+-- restore the last session
+vim.api.nvim_set_keymap("n", "<leader>ql", [[<cmd>lua require("persistence").load({ last = true })<cr>]], { desc = "Restore session last" })
+
+-- stop Persistence => session won't be saved on exit
+vim.api.nvim_set_keymap("n", "<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]], { desc = "Stop Persistence; won't save on exit" })
+
 -- Move cursor to other windows
 vim.keymap.set("n", "<leader>j", "<C-w>j<cr>", { desc = "Move cursor to window below" })
 vim.keymap.set("n", "<leader>k", "<C-w>k<cr>", { desc = "Move cursor to window above" })

@@ -28,6 +28,8 @@ size = 12.0
 
 style.blinking = "On"
 
+style.shape = "Beam"
+
 [mouse]
 
 hide_when_typing = true

@@ -1,6 +1,8 @@
 theme "catppuccin-mocha"
 
 keybinds {
+    // clear defaults to unbind "Ctrl q" so that we can use it in Telescope for neovim
+    unbind "Ctrl q" // unbind in all modes
     normal {
         unbind "Ctrl p"
         bind "Ctrl y" { SwitchToMode "pane"; }

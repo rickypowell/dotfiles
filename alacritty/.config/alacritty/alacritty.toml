@@ -18,6 +18,8 @@ startup_mode = "Windowed"
 
 option_as_alt = "Both"
 
+blur = true
+
 [font]
 
 normal.family = "BlexMono NF"

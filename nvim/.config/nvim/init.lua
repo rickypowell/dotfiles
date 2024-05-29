@@ -32,6 +32,10 @@ require("lazy").setup(
   }
 )
 
+-- Add the $CWD as a workspace folder to get
+-- the vim.lsp.buf.references() amoung all of the repo
+vim.lsp.buf.add_workspace_folder(vim.fn.getcwd())
+
 -- settings
 vim.cmd.colorscheme("catppuccin")
 

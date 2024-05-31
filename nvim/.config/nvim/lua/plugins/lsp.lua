@@ -98,6 +98,19 @@ return {
       vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Diagnostic previous" })
       vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Diagnostic next" })
 
+      -- float windows with borders
+      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+        vim.lsp.handlers.hover, {
+          border = "single",
+        }
+      )
+
+      vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+        vim.lsp.handlers.signature_help, {
+          border = "single",
+        }
+      )
+
       -- completions
       local cmp = require("cmp")
       -- local lspkind = require("lspkind")
@@ -186,6 +199,7 @@ return {
       -- Diagnostics
       vim.diagnostic.config({
         update_on_insert = true,
+        float = { border = "single" },
         focus = {
           focusable = false,
           style = "minimal",

@@ -93,6 +93,17 @@ return {
         },
       })
 
+      -- swift lsp
+      local lspconfig = require("lspconfig")
+      if lspconfig["sourcekit"] then
+        local capabilities = vim.lsp.protocol.make_client_capabilities()
+        capabilities.textDocument.completion.completionItem.snippetSupport = true
+        capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
+        lspconfig.sourcekit.setup({
+          capabilities = capabilities,
+        })
+      end
+
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
       vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Diagnostic previous" })

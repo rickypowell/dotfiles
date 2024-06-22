@@ -9,6 +9,8 @@ brew install nvim
 brew install ripgrep
 # Zellij install
 brew install zellij
+# GitHub command-line interface
+brew install gh
 
 stow --restow starship
 stow --restow nvim

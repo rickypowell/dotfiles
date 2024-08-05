@@ -11,10 +11,13 @@ brew install ripgrep
 brew install zellij
 # GitHub command-line interface
 brew install gh
+# Install Wezterm
+brew install --cask wezterm
 
 stow --restow starship
 stow --restow nvim
 stow --restow alacritty
+stow --restow wezterm
 stow --restow zellij
 
 # Alacritty themes

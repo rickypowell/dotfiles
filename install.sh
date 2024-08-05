@@ -11,8 +11,10 @@ brew install ripgrep
 brew install zellij
 # GitHub command-line interface
 brew install gh
-# Intall Alacritty
+# Install Alacritty
 brew install --cask alacritty
+# Install Kitty
+brew install --cask kitty
 # Install Wezterm
 brew install --cask wezterm
 

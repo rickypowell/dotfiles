@@ -37,10 +37,10 @@ config.macos_window_background_blur = 10
 -- Update the path as needed
 config.window_background_image = "/Users/" .. os.getenv("USER") .. "/Pictures/wezterm/background.jpeg"
 config.window_background_image_hsb = {
-    brightness = 0.1,  -- Adjust brightness (0.0 - 1.0)
-    hue = 1.0,         -- Adjust hue (0.0 - 1.0)
-    saturation = 1.0,  -- Adjust saturation (0.0 - 1.0)
-  }
+  brightness = 0.1,                    -- Adjust brightness (0.0 - 1.0)
+  hue = 1.0,                           -- Adjust hue (0.0 - 1.0)
+  saturation = 1.0,                    -- Adjust saturation (0.0 - 1.0)
+}
 config.window_background_opacity = 0.8 -- Opacity of the window background (0.0 - 1.0)
 
 
@@ -49,7 +49,7 @@ config.window_background_opacity = 0.8 -- Opacity of the window background (0.0 
 --
 
 config.font = wezterm.font_with_fallback {
-  "BlexMono NF",
+  { family = "BlexMono NF", weight = "Medium" },
   "Apple Color Emoji",
   "Fira Code",
   "Noto Color Emoji",

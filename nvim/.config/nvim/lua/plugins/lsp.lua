@@ -65,6 +65,15 @@ return {
             })
           end,
 
+          ["eslint"] = function(server_name)
+            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+            require("lspconfig")[server_name].setup({
+              capabilities = capabilities,
+            })
+          end,
+
           ["sourcekit"] = function(server_name)
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true

@@ -8,11 +8,13 @@ return {
   },
   config = function()
     -- Lua
-    vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end, { desc = "Toggle Trouble" })
-    vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end, { desc = "Toggle workspace Trouble" })
-    vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end, { desc = "Toggle document Trouble" })
-    vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end, { desc = "Toggle quickfix Trouble" })
-    vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end, { desc = "Toggle loclist Trouble" })
-    vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end, { desc = "Toggle lsp refs Trouble" })
+    local t = require("trouble")
+
+    vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Toggle Trouble" })
+    vim.keymap.set("n", "<leader>xw", "<cmd><cr>", { desc = "Toggle workspace Trouble" })
+    vim.keymap.set("n", "<leader>xd", "<cmd><cr>", { desc = "Toggle document Trouble" })
+    vim.keymap.set("n", "<leader>xq", "<cmd><cr>", { desc = "Toggle quickfix Trouble" })
+    vim.keymap.set("n", "<leader>xl", "<cmd><cr>", { desc = "Toggle loclist Trouble" })
+    vim.keymap.set("n", "gR", "<cmd><cr>", { desc = "Toggle lsp refs Trouble" })
   end
 }

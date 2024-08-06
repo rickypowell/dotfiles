@@ -22,6 +22,8 @@ require("keymaps")
 
 require("autocmd")
 
+require("filetypes")
+
 -- setup with Lazy.nvim
 require("lazy").setup(
   "plugins",

@@ -19,6 +19,8 @@ return {
         "javascript",
         "html",
         "swift",
+        "markdown",
+        "mdx",
       },
       sync_install = false,
       highlight = { enable = true },

@@ -12,6 +12,14 @@ config.color_scheme = "Catppuccin Mocha"
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = false
 
+config.front_end = "WebGpu"
+
+--
+-- Cursor
+--
+config.default_cursor_style = "BlinkingBar"
+config.cursor_thickness = "1pt"
+
 --
 -- Window
 --

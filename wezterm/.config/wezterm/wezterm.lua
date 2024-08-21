@@ -14,6 +14,8 @@ config.enable_tab_bar = false
 
 config.front_end = "WebGpu"
 
+config.max_fps = 60
+
 --
 -- Cursor
 --
@@ -32,7 +34,7 @@ config.window_padding = {
 }
 
 -- config.window_background_opacity = 0.9
-config.macos_window_background_blur = 10
+config.macos_window_background_blur = 60
 
 -- Update the path as needed
 config.window_background_image = "/Users/" .. os.getenv("USER") .. "/Pictures/wezterm/background.jpeg"

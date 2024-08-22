@@ -37,7 +37,24 @@ return {
     },
 
     config = function()
-      require("nvim-treesitter.configs").setup({})
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = {
+          "c",
+          "lua",
+          "vim",
+          "vimdoc",
+          "query",
+          "rust",
+          "typescript",
+          "tsx",
+          "javascript",
+          "html",
+          "swift",
+          "markdown",
+          "markdown_inline",
+        },
+        sync_install = false,
+      })
       -- When in diff mode, we want to use the default
       -- vim text objects c & C instead of the treesitter ones.
       local move = require("nvim-treesitter.textobjects.move") ---@type table<string,fun(...)>

@@ -4,21 +4,20 @@ import = [
 
 [window]
 
-opacity = 0.70
+opacity = 0.90
 
-padding.x = 16
-padding.y = 16
+padding.x = 8
+padding.y = 8
 
 decorations = "Full"
-
-# not working on M1 mac
-# blur = true
 
 startup_mode = "Windowed"
 
 option_as_alt = "Both"
 
 blur = true
+
+dimensions = { columns = 155, lines = 60 }
 
 [font]
 

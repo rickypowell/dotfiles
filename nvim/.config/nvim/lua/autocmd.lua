@@ -54,3 +54,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 --     })
 --   end,
 -- })
+
+-- Recognize the syntax as "sh" (shell) when opening nvim with `$ fc` command
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = "*",
+  callback = function()
+    if vim.bo.filetype == '' then
+      vim.bo.filetype = 'sh'
+    end
+  end,
+})

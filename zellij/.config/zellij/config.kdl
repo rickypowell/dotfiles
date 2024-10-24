@@ -12,9 +12,6 @@ keybinds {
 
         unbind "Ctrl o"
         bind "Ctrl s" { SwitchToMode "session"; }
-
-        unbind "Ctrl h"
-        bind "Ctrl m" { SwitchToMode "move"; }
     }
 }
 

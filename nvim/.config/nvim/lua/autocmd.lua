@@ -59,7 +59,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = "*",
   callback = function()
-    if vim.bo.filetype == '' then
+    local bufname = vim.api.nvim_buf_get_name(0)
+    if vim.bo.filetype == '' and bufname:match("fc") then
       vim.bo.filetype = 'sh'
     end
   end,

@@ -17,11 +17,14 @@ brew install --cask alacritty
 brew install --cask kitty
 # Install Wezterm
 brew install --cask wezterm
+# install Ghostty
+brew install --cask ghostty
 
 stow --restow starship
 stow --restow nvim
 stow --restow alacritty
 stow --restow wezterm
+stow --restow ghostty
 stow --restow zellij
 
 # Alacritty themes

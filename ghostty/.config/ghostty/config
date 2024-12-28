@@ -1,0 +1,9 @@
+font-family = "BlexMono NF"
+
+background-opacity = 0.86
+background-blur-radius = 20
+
+window-padding-x = 8
+window-padding-y = 4
+
+theme = catppuccin-mocha

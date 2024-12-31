@@ -7,3 +7,8 @@ window-padding-x = 8
 window-padding-y = 4
 
 theme = catppuccin-mocha
+
+alt+super+j=goto_pane:bottom
+alt+super+k=goto_pane:top
+alt+super+h=goto_pane:left
+alt+super+l=goto_pane:right

@@ -8,7 +8,12 @@ window-padding-y = 4
 
 theme = catppuccin-mocha
 
-alt+super+j=goto_pane:bottom
-alt+super+k=goto_pane:top
-alt+super+h=goto_pane:left
-alt+super+l=goto_pane:right
+keybind = alt+j=goto_split:bottom
+keybind = alt+k=goto_split:top
+keybind = alt+h=goto_split:left
+keybind = alt+l=goto_split:right
+
+keybind = alt+super+j=resize_split:down,20
+keybind = alt+super+k=resize_split:up,20
+keybind = alt+super+h=resize_split:left,20
+keybind = alt+super+l=resize_split:right,20

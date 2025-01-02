@@ -5,6 +5,9 @@ background-blur-radius = 20
 
 window-padding-x = 8
 window-padding-y = 4
+window-padding-color = extend
+window-inherit-working-directory = true
+window-title-font-family = "BlexMono NF"
 
 theme = catppuccin-mocha
 

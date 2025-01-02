@@ -54,6 +54,7 @@ return {
           "markdown_inline",
         },
         sync_install = false,
+        fold = { enable = true },
       })
       -- When in diff mode, we want to use the default
       -- vim text objects c & C instead of the treesitter ones.

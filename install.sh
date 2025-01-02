@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+echo "\x1b[1;36mInstalling Homebrew...\x1b[0m"
+
 brew install stow 
 # Starship command line prompt
 brew install starship
@@ -20,6 +22,8 @@ brew install --cask wezterm
 # install Ghostty
 brew install --cask ghostty
 
+echo "\x1b[1;36mRestow...\x1b[0m"
+
 stow --restow starship
 stow --restow nvim
 stow --restow alacritty
@@ -27,12 +31,15 @@ stow --restow wezterm
 stow --restow ghostty
 stow --restow zellij
 
+echo "\x1b[1;36mClone Alacritty themes...\x1b[0m"
+
 # Alacritty themes
 # We use Alacritty's default Linux config directory as our storage location here.
 if [ ! -d "alacritty/.config/alacritty/themes" ]; then
     mkdir -p alacritty/.config/alacritty/themes
     git clone https://github.com/alacritty/alacritty-theme alacritty/.config/alacritty/themes
+    echo "\x1b[32mSuccess:\x1b[0m Alacritty themes cloned"
 else
-    echo "Theme already exists"
+    echo "\x1b[33mWarning:\x1b[0m Alacritty theme already exists"
 fi
 

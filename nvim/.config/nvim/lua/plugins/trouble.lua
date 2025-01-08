@@ -9,6 +9,7 @@ return {
   config = function()
     -- Lua
     local t = require("trouble")
+    t.setup()
 
     vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Toggle Trouble" })
     vim.keymap.set("n", "<leader>xw", "<cmd><cr>", { desc = "Toggle workspace Trouble" })

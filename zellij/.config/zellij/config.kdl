@@ -3,6 +3,14 @@ theme "catppuccin-mocha"
 keybinds {
     // clear defaults to unbind "Ctrl q" so that we can use it in Telescope for neovim
     unbind "Ctrl q" // unbind in all modes
+    // clear default to allow cursor "back" one word on command line
+    unbind "Alt b"
+    // clear default to allow cursor "forward" one word on command line
+    unbind "Alt f"
+    // clear default to allow cursor "end" of line on command line
+    unbind "Ctrl e"
+    // clear default to allow cursor "begin" of line on command line
+    unbind "Ctrl a"
     normal {
         unbind "Ctrl p"
         bind "Ctrl y" { SwitchToMode "pane"; }

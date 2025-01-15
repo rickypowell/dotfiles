@@ -21,6 +21,8 @@ brew install --cask kitty
 brew install --cask wezterm
 # install Ghostty
 brew install --cask ghostty
+# install zig
+brew install zig
 
 echo "\x1b[1;36mRestow...\x1b[0m"
 

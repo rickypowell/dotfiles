@@ -36,6 +36,7 @@ return {
         },
       })
       require("mason-lspconfig").setup({
+        automatic_installation = false,
         ensure_installed = {
           "lua_ls",
           "rust_analyzer",
@@ -85,11 +86,12 @@ return {
             })
           end,
 
-          ["tsserver"] = function(server_name)
+          ["ts_ls"] = function(server_name)
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.textDocument.completion.completionItem.snippetSupport = true
 
             local lsp_config = require("lspconfig")
+            print("Setting up tsserver? " .. server_name)
             lsp_config[server_name].setup({
               capabilities = capabilities,
               root_dir = lsp_config.util.root_pattern({ ".git" }),

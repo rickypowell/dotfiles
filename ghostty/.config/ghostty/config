@@ -8,6 +8,8 @@ window-padding-y = 4
 window-inherit-working-directory = true
 window-title-font-family = "BlexMono NF"
 
+mouse-hide-while-typing = true
+
 theme = catppuccin-mocha
 
 keybind = alt+j=goto_split:bottom

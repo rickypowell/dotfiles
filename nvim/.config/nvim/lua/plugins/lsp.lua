@@ -42,7 +42,7 @@ return {
           "rust_analyzer",
           "ts_ls",
           "eslint",
-          "gopls",
+          -- "gopls",
           "html",
           "cssls",
           "jsonls",

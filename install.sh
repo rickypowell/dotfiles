@@ -24,6 +24,16 @@ brew install --cask ghostty
 # install zig
 brew install zig
 
+# macOS only
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # AeroSpace: https://github.com/nikitabobko/AeroSpace
+    brew install --cask nikitabobko/tap/aerospace
+
+    # JankyBorders: https://github.com/FelixKratz/JankyBorders
+    brew tap FelixKratz/formulae
+    brew install borders
+fi
+
 echo "\x1b[1;36mRestow...\x1b[0m"
 
 stow --restow starship
@@ -32,6 +42,11 @@ stow --restow alacritty
 stow --restow wezterm
 stow --restow ghostty
 stow --restow zellij
+
+# macOS only
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    stow --restow aerospace
+fi
 
 echo "\x1b[1;36mClone Alacritty themes...\x1b[0m"
 

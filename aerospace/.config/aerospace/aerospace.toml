@@ -11,7 +11,7 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 # Set colors to catppuccin-mocha: https://catppuccin.com/palette/
 after-startup-command = [
-  'exec-and-forget borders active_color=0xff89dceb inactive_color=0xff9399b2 hidpi=on width=16.0'
+  'exec-and-forget borders active_color=0xff89dceb inactive_color=0xaf9399b2 hidpi=on width=16.0'
 ]
 
 # Start AeroSpace at login
@@ -103,12 +103,6 @@ automatically-unhide-macos-hidden-apps = false
     alt-slash = 'layout tiles horizontal vertical'
     alt-comma = 'layout accordion horizontal vertical'
 
-    # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    ctrl-h = 'focus left'
-    ctrl-j = 'focus down'
-    ctrl-k = 'focus up'
-    ctrl-l = 'focus right'
-
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
     alt-shift-h = 'move left'
     alt-shift-j = 'move down'
@@ -168,6 +162,12 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+    # See: https://nikitabobko.github.io/AeroSpace/commands#focus
+    ctrl-h = 'focus left'
+    ctrl-j = 'focus down'
+    ctrl-k = 'focus up'
+    ctrl-l = 'focus right'
 
     down = 'volume down'
     up = 'volume up'

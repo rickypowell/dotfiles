@@ -11,7 +11,7 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 # Set colors to catppuccin-mocha: https://catppuccin.com/palette/
 after-startup-command = [
-  'exec-and-forget borders active_color=0xff89dceb inactive_color=0xaf9399b2 hidpi=on width=16.0'
+  'exec-and-forget borders active_color=0xff89dceb inactive_color=0xaf9399b2 hidpi=on width=6.0'
 ]
 
 # Start AeroSpace at login
@@ -60,12 +60,12 @@ automatically-unhide-macos-hidden-apps = false
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 64
-    inner.vertical =   64
-    outer.left =       64
-    outer.bottom =     64
-    outer.top =        64
-    outer.right =      64
+    inner.horizontal = 16
+    inner.vertical =   16
+    outer.left =       16
+    outer.bottom =     16
+    outer.top =        16
+    outer.right =      16
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

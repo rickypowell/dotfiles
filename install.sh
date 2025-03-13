@@ -13,6 +13,8 @@ brew install ripgrep
 brew install zellij
 # GitHub command-line interface
 brew install gh
+# GitLab command-line interface
+brew install glab
 # Install Alacritty
 brew install --cask alacritty
 # Install Kitty
@@ -27,7 +29,8 @@ brew install zig
 brew install terraform
 # install aws
 brew install awscli
-
+# install tree
+brew install tree
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # AeroSpace: https://github.com/nikitabobko/AeroSpace

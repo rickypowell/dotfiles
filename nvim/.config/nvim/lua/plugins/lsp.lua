@@ -38,6 +38,7 @@ return {
       require("mason-lspconfig").setup({
         automatic_installation = false,
         ensure_installed = {
+          "terraformls",
           "ruff",
           "lua_ls",
           "rust_analyzer",

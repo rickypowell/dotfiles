@@ -23,6 +23,10 @@ brew install --cask wezterm
 brew install --cask ghostty
 # install zig
 brew install zig
+# install terraform
+brew install terraform
+# install aws
+brew install awscli
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then

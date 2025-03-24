@@ -26,7 +26,8 @@ brew install --cask ghostty
 # install zig
 brew install zig
 # install terraform
-brew install terraform
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
 # install aws
 brew install awscli
 # install tree

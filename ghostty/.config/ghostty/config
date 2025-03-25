@@ -1,4 +1,6 @@
 font-family = "BlexMono NF"
+cursor-color = "#8980F5"
+cursor-opacity = 0.8
 
 background-opacity = 0.86
 background-blur-radius = 20

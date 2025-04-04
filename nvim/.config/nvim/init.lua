@@ -24,6 +24,8 @@ require("autocmd")
 
 require("filetypes")
 
+require("commands")
+
 -- setup with Lazy.nvim
 require("lazy").setup(
   "plugins",

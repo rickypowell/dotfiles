@@ -69,6 +69,30 @@ return {
             })
           end,
 
+          ["rust_analyzer"] = function(server_name)
+            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+            require("lspconfig")[server_name].setup({
+              capabilities = capabilities,
+              settings = {
+                ["rust-analyzer"] = {
+                  inlayHints = {
+                    typeHints = {
+                      enable = true,
+                    },
+                    parameterHints = {
+                      enable = true,
+                    },
+                    chainingHints = {
+                      enable = false,
+                    },
+                  },
+                },
+              },
+            })
+          end,
+
           ["eslint"] = function(server_name)
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -116,6 +140,9 @@ return {
           end,
         },
       })
+
+      -- inlay hints
+      vim.lsp.inlay_hint.enable(true)
 
       -- swift lsp
       local lspconfig = require("lspconfig")

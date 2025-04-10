@@ -43,3 +43,15 @@ vim.keymap.set("n", "<leader>Gh", "<cmd>0Gclog<cr>", { desc = "Git history for c
 -- LSP
 vim.keymap.set("n", "<leader>th", "<cmd>ToggleInlayHints<cr>", { desc = "Toggle Inlay Hints" })
 
+-- WhichKey
+local which_key_enabled
+vim.keymap.set("n", "<leader>tw", function()
+  local lazy = require("lazy")
+  if not which_key_enabled then
+    lazy.disable("which-key.nvim")
+    which_key_enabled = false
+  else
+    lazy.enable("which-key.nvim")
+    which_key_enabled = true
+  end
+end, { desc = "Toggle WhichKey" })

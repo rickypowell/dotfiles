@@ -109,6 +109,10 @@ return {
             local lspconfig = require("lspconfig")
             lspconfig[server_name].setup({
               capabilities = capabilities,
+              flags = {
+                debounce_text_changes = 1000, -- milliseconds 
+                timeout_ms = 20000, -- default is 10 seconds
+              },
             })
           end,
 

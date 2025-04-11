@@ -14,3 +14,7 @@ disabled = true
 
 [[battery.display]]
 threshold = 30
+
+# Custom Swift configuration
+[swift]
+format = "via [🏎️ $version](green bold) "

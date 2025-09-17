@@ -12,7 +12,7 @@ window-title-font-family = "BlexMono NF"
 
 mouse-hide-while-typing = true
 
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 
 keybind = alt+j=goto_split:bottom
 keybind = alt+k=goto_split:top

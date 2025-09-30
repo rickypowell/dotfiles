@@ -40,6 +40,7 @@ return {
         ensure_installed = {
           "terraformls",
           "ruff",
+          "pyright",
           "lua_ls",
           "rust_analyzer",
           "ts_ls",
@@ -125,6 +126,19 @@ return {
             lsp_config[server_name].setup({
               capabilities = capabilities,
               root_dir = lsp_config.util.root_pattern({ ".git" }),
+              settings = {
+                typescript = {
+                  inlayHints = {
+                    includeInlayParameterNameHints = "all",
+                    includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+                    includeInlayFunctionParameterTypeHints = true,
+                    includeVariableTypeHints = true,
+                    includeInlayPropertyDeclarationTypeHints = true,
+                    includeInlayFunctionLikeReturnTypeHints = true,
+                    includeInlayEnumMemberValueHints = true,
+                  },
+                },
+              },
             })
           end,
 

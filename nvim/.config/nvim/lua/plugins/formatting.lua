@@ -15,6 +15,7 @@ return {
         formatters_by_ft = {
           typescript = { "prettier" },
           typescriptreact = { "prettier" },
+          json = { "prettier" },
         },
         format_on_save = fmt_config,
       })

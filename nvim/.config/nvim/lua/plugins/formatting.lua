@@ -19,7 +19,7 @@ return {
         format_on_save = fmt_config,
       })
 
-      vim.keymap({ "n", "v" }, "<leader>mp", function()
+      vim.keymap.set({ "n", "v" }, "<leader>mp", function()
         conform.format(fmt_config)
       end, { desc = "Format file or range (in visual mode)" })
     end,

@@ -16,8 +16,17 @@ return {
           typescript = { "prettier" },
           typescriptreact = { "prettier" },
           json = { "prettier" },
+          swift = { "swift" },
         },
-        format_on_save = fmt_config,
+
+        format_on_save = function(bufnr)
+          local ignore_filetypes = {}
+          if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
+            return
+          end
+
+          return fmt_config
+        end,
       })
 
       vim.keymap.set({ "n", "v" }, "<leader>mp", function()

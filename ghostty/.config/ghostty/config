@@ -1,10 +1,13 @@
 font-family = "BlexMono NF"
-cursor-color = "#8980F5"
+# cursor-color = "#8980F5"
 cursor-opacity = 0.8
 adjust-cursor-thickness = 4
 
 background-opacity = 0.95
+background-opacity = 0.67
 background-blur-radius = 32
+background-blur-radius = 55
+background = #000f0f
 
 window-padding-x = 8
 window-padding-y = 4
@@ -13,7 +16,9 @@ window-title-font-family = "BlexMono NF"
 
 mouse-hide-while-typing = true
 
-theme = Catppuccin Mocha
+# theme = Catppuccin Mocha
+# theme = Everforest Dark Hard
+theme = evergarden-winter-blue.yml
 
 keybind = alt+j=goto_split:bottom
 keybind = alt+k=goto_split:top
@@ -24,3 +29,6 @@ keybind = alt+ctrl+j=resize_split:down,20
 keybind = alt+ctrl+k=resize_split:up,20
 keybind = alt+ctrl+h=resize_split:left,20
 keybind = alt+ctrl+l=resize_split:right,20
+
+keybind = alt+ctrl+n=scroll_page_lines:1
+keybind = alt+ctrl+p=scroll_page_lines:-1

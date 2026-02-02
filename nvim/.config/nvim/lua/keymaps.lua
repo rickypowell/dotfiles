@@ -9,13 +9,16 @@ vim.keymap.set("n", "<leader>e", "<cmd>Ex<cr>", { desc = "Open file explorer" })
 
 -- Session with persistence plugin
 -- restore the session for the current directory
-vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], { desc = "Restore session from current directory" })
+vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]],
+  { desc = "Restore session from current directory" })
 
 -- restore the last session
-vim.api.nvim_set_keymap("n", "<leader>ql", [[<cmd>lua require("persistence").load({ last = true })<cr>]], { desc = "Restore session last" })
+vim.api.nvim_set_keymap("n", "<leader>ql", [[<cmd>lua require("persistence").load({ last = true })<cr>]],
+  { desc = "Restore session last" })
 
 -- stop Persistence => session won't be saved on exit
-vim.api.nvim_set_keymap("n", "<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]], { desc = "Stop Persistence; won't save on exit" })
+vim.api.nvim_set_keymap("n", "<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]],
+  { desc = "Stop Persistence; won't save on exit" })
 
 -- Move cursor to other windows
 vim.keymap.set("n", "<leader>j", "<C-w>j<cr>", { desc = "Move cursor to window below" })
@@ -28,12 +31,21 @@ local INT_RESIZE = 2
 vim.keymap.set("n", "<C-k>", "<cmd>resize -" .. INT_RESIZE .. "<cr>", { desc = "Decrease current window height" })
 vim.keymap.set("n", "<C-j>", "<cmd>resize +" .. INT_RESIZE .. "<cr>", { desc = "Increase current window height" })
 vim.keymap.set("n", "<C-h>", "<cmd>vertical resize +" .. INT_RESIZE .. "<cr>", { desc = "Increase current window width" })
-vim.keymap.set("n", "<C-l>", "<cmd>vertical resize -" .. INT_RESIZE .. "<cr>", { desc = "Decrease current Increase rent window width" })
+vim.keymap.set("n", "<C-l>", "<cmd>vertical resize -" .. INT_RESIZE .. "<cr>",
+  { desc = "Decrease current Increase rent window width" })
 
 -- Scrolling
 -- while scrolling up/down, keep the current highlighted line centered horizontally
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center" })
+
+-- Cycle through highlighted text
+-- after searching with / or ? or * or #, pressing n and N will also center horizontally
+vim.keymap.set("n", "n", "nzz", { desc = "next item in search" })
+vim.keymap.set("n", "N", "Nzz", { desc = "prev item in search" })
+-- when pressing * or #, center the next word horizontally
+vim.keymap.set("n", "*", "*zz", { desc = "highlight forward next word" })
+vim.keymap.set("n", "#", "#zz", { desc = "highlight backward next word" })
 
 -- Git
 -- lookup git history for current file in buffer in a quickfix list with a Fugitive command

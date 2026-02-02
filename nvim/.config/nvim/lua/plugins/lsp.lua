@@ -111,8 +111,8 @@ return {
             lspconfig[server_name].setup({
               capabilities = capabilities,
               flags = {
-                debounce_text_changes = 1000, -- milliseconds 
-                timeout_ms = 20000, -- default is 10 seconds
+                debounce_text_changes = 1000, -- milliseconds
+                timeout_ms = 20000,           -- default is 10 seconds
               },
             })
           end,
@@ -175,8 +175,8 @@ return {
 
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-      vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Diagnostic previous" })
-      vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Diagnostic next" })
+      vim.keymap.set('n', '[dzz', vim.diagnostic.goto_prev, { desc = "Diagnostic previous" })
+      vim.keymap.set('n', ']dzz', vim.diagnostic.goto_next, { desc = "Diagnostic next" })
 
       -- float windows with borders
       vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(

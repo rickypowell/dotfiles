@@ -13,14 +13,15 @@ return {
 
       conform.setup({
         formatters_by_ft = {
+          javascript = { "prettier" },
           typescript = { "prettier" },
           typescriptreact = { "prettier" },
           json = { "prettier" },
-          swift = { "swift" },
+          -- swift = { "swift" },
         },
 
         format_on_save = function(bufnr)
-          local ignore_filetypes = {}
+          local ignore_filetypes = { "swift", "css" }
           if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
             return
           end

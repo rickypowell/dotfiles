@@ -41,5 +41,8 @@ require("lazy").setup(
 vim.lsp.buf.add_workspace_folder(vim.fn.getcwd())
 
 -- settings
-vim.cmd.colorscheme("catppuccin")
-
+-- vim.cmd.colorscheme("catppuccin")
+-- vim.cmd.colorscheme("fluoromachine")
+-- vim.cmd.colorscheme("kanagawa")
+-- vim.cmd.colorscheme("vague")
+vim.cmd.colorscheme("evergarden")

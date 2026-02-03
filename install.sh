@@ -32,6 +32,8 @@ brew install hashicorp/tap/terraform
 brew install awscli
 # install tree
 brew install tree
+# install opencode
+brew install anomalyco/tap/opencode
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # AeroSpace: https://github.com/nikitabobko/AeroSpace
@@ -50,6 +52,7 @@ stow --restow alacritty
 stow --restow wezterm
 stow --restow ghostty
 stow --restow zellij
+stow --restow opencode
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then

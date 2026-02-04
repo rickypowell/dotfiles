@@ -2,6 +2,14 @@
   "$schema": "https://opencode.ai/config.json",
   "theme": "system",
   "autoupdate": true,
+  "permission": {
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "lsp": "allow",
+    "read": "allow",
+    "webfetch": "allow"
+  },
   "provider": {
     "lmstudio": {
       "npm": "@ai-sdk/openai-compatible",

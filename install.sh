@@ -9,18 +9,10 @@ brew install starship
 brew install nvim
 # Install ripgrep for grep search in Telescope
 brew install ripgrep
-# Zellij install
-brew install zellij
 # GitHub command-line interface
 brew install gh
 # GitLab command-line interface
 brew install glab
-# Install Alacritty
-brew install --cask alacritty
-# Install Kitty
-brew install --cask kitty
-# Install Wezterm
-brew install --cask wezterm
 # install Ghostty
 brew install --cask ghostty
 # install zig
@@ -48,10 +40,7 @@ echo "\x1b[1;36mRestow...\x1b[0m"
 
 stow --restow starship
 stow --restow nvim
-stow --restow alacritty
-stow --restow wezterm
 stow --restow ghostty
-stow --restow zellij
 stow --restow opencode
 
 # macOS only

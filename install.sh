@@ -9,6 +9,8 @@ brew install starship
 brew install nvim
 # Install ripgrep for grep search in Telescope
 brew install ripgrep
+# Install fd for `find` search in Telescope
+brew install fd
 # GitHub command-line interface
 brew install gh
 # GitLab command-line interface

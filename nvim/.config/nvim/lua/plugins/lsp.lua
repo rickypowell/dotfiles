@@ -13,8 +13,8 @@ return {
       "hrsh7th/nvim-cmp",
 
       -- vsnip user
-      "hrsh7th/cmp-vsnip",
-      "hrsh7th/vim-vsnip",
+      -- "hrsh7th/cmp-vsnip",
+      -- "hrsh7th/vim-vsnip",
       -- luasnip users.
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
@@ -218,7 +218,7 @@ return {
         }),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
-          { name = "vsnip" },   -- For vsnip users.
+          -- { name = "vsnip" },   -- For vsnip users.
           { name = "luasnip" }, -- For luasnip users.
           { name = "treesitter" },
           -- { name = "ultisnips" }, -- For ultisnips users.

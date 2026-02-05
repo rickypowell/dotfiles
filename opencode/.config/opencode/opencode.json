@@ -37,6 +37,21 @@
           "name": "qwen/qwen3-4b"
         }
       }
+    },
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "ministral-3:8b": {
+          "name": "ministral-3:8b"
+        },
+        "ministral-3:14b": {
+          "name": "ministral-3:14b"
+        }
+      }
     }
   }
 }

@@ -24,6 +24,8 @@ brew install hashicorp/tap/terraform
 brew install awscli
 # install tree
 brew install tree
+# install Ollama
+brew install ollama
 # install opencode
 brew install anomalyco/tap/opencode
 # macOS only

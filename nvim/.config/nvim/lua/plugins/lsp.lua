@@ -65,16 +65,17 @@ return {
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-            require("lspconfig")[server_name].setup({
+            vim.lsp.config(server_name, {
               capabilities = capabilities,
             })
+            vim.lsp.enable(server_name)
           end,
 
           ["rust_analyzer"] = function(server_name)
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-            require("lspconfig")[server_name].setup({
+            vim.lsp.config(server_name, {
               capabilities = capabilities,
               settings = {
                 ["rust-analyzer"] = {
@@ -92,40 +93,40 @@ return {
                 },
               },
             })
+            vim.lsp.enable(server_name)
           end,
 
           ["eslint"] = function(server_name)
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-            require("lspconfig")[server_name].setup({
+            vim.lsp.config(server_name, {
               capabilities = capabilities,
             })
+            vim.lsp.enable(server_name)
           end,
 
           ["sourcekit"] = function(server_name)
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
 
-            local lspconfig = require("lspconfig")
-            lspconfig[server_name].setup({
+            vim.lsp.config(server_name, {
               capabilities = capabilities,
               flags = {
                 debounce_text_changes = 1000, -- milliseconds
                 timeout_ms = 20000,           -- default is 10 seconds
               },
             })
+            vim.lsp.enable(server_name)
           end,
 
           ["ts_ls"] = function(server_name)
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-            local lsp_config = require("lspconfig")
-            print("Setting up tsserver? " .. server_name)
-            lsp_config[server_name].setup({
+            vim.lsp.config(server_name, {
               capabilities = capabilities,
-              root_dir = lsp_config.util.root_pattern({ ".git" }),
+              root_dir = vim.lsp.config.root_pattern({ ".git" }),
               settings = {
                 typescript = {
                   inlayHints = {
@@ -140,12 +141,11 @@ return {
                 },
               },
             })
+            vim.lsp.enable(server_name)
           end,
 
           ["lua_ls"] = function()
-            local lspconfig = require("lspconfig")
-
-            lspconfig.lua_ls.setup({
+            vim.lsp.config("lua_ls", {
               settings = {
                 Lua = {
                   diagnostics = {
@@ -155,6 +155,7 @@ return {
                 },
               },
             })
+            vim.lsp.enable("lua_ls")
           end,
         },
       })
@@ -163,15 +164,13 @@ return {
       vim.lsp.inlay_hint.enable(true)
 
       -- swift lsp
-      local lspconfig = require("lspconfig")
-      if lspconfig["sourcekit"] then
-        local capabilities = vim.lsp.protocol.make_client_capabilities()
-        capabilities.textDocument.completion.completionItem.snippetSupport = true
-        capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
-        lspconfig.sourcekit.setup({
-          capabilities = capabilities,
-        })
-      end
+      local capabilities = vim.lsp.protocol.make_client_capabilities()
+      capabilities.textDocument.completion.completionItem.snippetSupport = true
+      capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
+      vim.lsp.config("sourcekit", {
+        capabilities = capabilities,
+      })
+      vim.lsp.enable("sourcekit")
 
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions

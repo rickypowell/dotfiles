@@ -24,7 +24,10 @@
       "rm *": "ask",
       "sed *": "ask",
       "tail *": "allow",
-      "wc *": "allow"
+      "wc *": "allow",
+      "xcodebuild *": "allow",
+      "xcrun *": "allow",
+      "swiftc *": "allow"
     },
     "webfetch": "allow"
   },

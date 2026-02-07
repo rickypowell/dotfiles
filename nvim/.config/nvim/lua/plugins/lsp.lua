@@ -114,7 +114,7 @@ return {
               capabilities = capabilities,
               flags = {
                 debounce_text_changes = 1000, -- milliseconds
-                timeout_ms = 20000,           -- default is 10 seconds
+                timeout_ms = 30000,           -- increased from 20s for large iOS projects
               },
             })
             vim.lsp.enable(server_name)

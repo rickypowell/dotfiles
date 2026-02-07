@@ -19,6 +19,9 @@ brew install glab
 brew install --cask ghostty
 # install zig
 brew install zig
+# install bun
+# refer: https://bun.sh/
+brew install oven-sh/bun/bun
 # install terraform
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform

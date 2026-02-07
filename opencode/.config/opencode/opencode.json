@@ -8,7 +8,20 @@
     "list": "allow",
     "lsp": "allow",
     "read": "allow",
-    "bash": "ask",
+    "bash": {
+      "*": "ask",
+      "cd *": "allow",
+      "find *": "allow",
+      "grep *": "allow",
+      "git *": "allow",
+      "head *": "allow",
+      "ls *": "allow",
+      "npm *": "allow",
+      "rg *": "allow",
+      "rm *": "ask",
+      "tail *": "allow",
+      "wc *": "allow"
+    },
     "webfetch": "allow"
   },
   "provider": {

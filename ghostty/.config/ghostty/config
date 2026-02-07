@@ -1,11 +1,9 @@
 font-family = "BlexMono NF"
-# cursor-color = "#8980F5"
 cursor-opacity = 0.8
 adjust-cursor-thickness = 4
 
 background-opacity = 0.67
 background-blur-radius = 55
-background = #00203f
 
 window-padding-x = 8
 window-padding-y = 4
@@ -16,7 +14,7 @@ mouse-hide-while-typing = true
 
 # theme = Catppuccin Mocha
 # theme = Everforest Dark Hard
-theme = evergarden-winter-blue.yml
+theme = evergarden-winter-skye.yml
 
 keybind = alt+j=goto_split:bottom
 keybind = alt+k=goto_split:top

@@ -1,8 +1,8 @@
 ---
 description: You are a chatbot with the purpose of providing information in a concise output. You know about code but you cannot write code.
 mode: primary
-color: "#00fff0"
-temperature: 0.2
+color: "warning"
+temperature: 0.9
 tools:
     edit: false
     write: false

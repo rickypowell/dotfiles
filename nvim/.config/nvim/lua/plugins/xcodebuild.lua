@@ -14,11 +14,6 @@ return {
   },
 
   config = function()
-    -- setup depenency `snacks.nvim` to use images for Xcode previews feature
-    require('snacks').setup({
-      -- default image configuration
-      image = {},
-    })
     require('xcodebuild').setup({
       -- put some options here or leave it empty to use default settings
     })

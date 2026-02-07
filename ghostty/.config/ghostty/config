@@ -3,11 +3,9 @@ font-family = "BlexMono NF"
 cursor-opacity = 0.8
 adjust-cursor-thickness = 4
 
-background-opacity = 0.95
 background-opacity = 0.67
-background-blur-radius = 32
 background-blur-radius = 55
-background = #000f0f
+background = #00203f
 
 window-padding-x = 8
 window-padding-y = 4

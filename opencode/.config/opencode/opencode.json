@@ -8,6 +8,7 @@
     "list": "allow",
     "lsp": "allow",
     "read": "allow",
+    "bash": "ask",
     "webfetch": "allow"
   },
   "provider": {
@@ -18,6 +19,9 @@
         "baseURL": "http://127.0.0.1:1234/v1"
       },
       "models": {
+        "google/gemma-3-12b": {
+          "name": "google/gemma-3-12b"
+        },
         "mistralai/devstral-small-2-2512": {
           "name": "mistralai/devstral-small-2-2512"
         },
@@ -35,6 +39,12 @@
         },
         "qwen/qwen3-4b": {
           "name": "qwen/qwen3-4b"
+        },
+        "qwen/qwen3-vl-8b": {
+          "name": "qwen/qwen3-vl-8b"
+        },
+        "zai-org/glm-4.6v-flash": {
+          "name": "zai-org/glm-4.6v-flash"
         }
       }
     },

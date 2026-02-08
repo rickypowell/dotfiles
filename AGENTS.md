@@ -7,6 +7,10 @@ This file contains guidelines and commands for agentic coding agents working in 
 
 This is a personal dotfiles repository for macOS development environments. It uses GNU Stow for managing symlinks and includes configurations for various terminal applications, editors, and development tools.
 
+## Creating Plan
+
+We create todos every time we create a plan.
+
 ## Project Structure
 
 ```

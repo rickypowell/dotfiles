@@ -11,7 +11,9 @@
     "bash": {
       "*": "ask",
       "awk *": "allow",
+      "cat *": "allow",
       "cd *": "allow",
+      "echo *": "allow",
       "find *": "allow",
       "git *": "allow",
       "git push *": "ask",

@@ -33,6 +33,8 @@ brew install tree
 brew install ollama
 # install opencode
 brew install anomalyco/tap/opencode
+# install xcbeautify
+brew install xcbeautify
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # AeroSpace: https://github.com/nikitabobko/AeroSpace

@@ -1,6 +1,6 @@
 ---
 description: Create a PR plan with title, description, and checklist
-agent: plan
+agent: build
 ---
 
 Analyze the current git state and generate a comprehensive pull request plan.
@@ -17,40 +17,40 @@ Analyze the current git state and generate a comprehensive pull request plan.
 !`BRANCH=$(git branch --show-current 2>/dev/null); if git ls-remote --heads origin "$BRANCH" >/dev/null 2>&1 && [ "$(git ls-remote --heads origin "$BRANCH" 2>/dev/null | grep -c .)" -gt 0 ]; then echo "✅ Branch exists and is tracking remotely."; else echo "⚠️ No branch exists. Create one from the base branch:
 
 1. Create and checkout new branch:
-   \`\`\`bash
+   ```bash
    git checkout -b <type>/<short-description> <base-branch>
-   \`\`\`
+   ```
 
 2. Push and set upstream tracking:
-   \`\`\`bash
+   ```bash
    git push -u origin <type>/<short-description>
-   \`\`\`
+   ```
 
 3. Verify branch creation:
-   \`\`\`bash
+   ```bash
    git branch -vv
-   \`\`\`
+   ```
 
 **Branch types (conventional commits):**
-- \`feat/\` - New feature
-- \`fix/\` - Bug fix
-- \`chore/\` - Maintenance tasks
-- \`docs/\` - Documentation changes
-- \`refactor/\` - Code refactoring
-- \`test/\` - Test additions/changes
-- \`ci/\` - CI configuration changes
-- \`build/\` - Build system changes
+- `feat/` - New feature
+- `fix/` - Bug fix
+- `chore/` - Maintenance tasks
+- `docs/` - Documentation changes
+- `refactor/` - Code refactoring
+- `test/` - Test additions/changes
+- `ci/` - CI configuration changes
+- `build/` - Build system changes
 
 **Example:**
-\`\`\`bash
+```bash
 git checkout -b feat/add-login main
 git push -u origin feat/add-login
-\`\`\`"; fi`
+```
 
 **PR Plan Output:**
 
 ## Title
-[Suggested PR title based on primary commit message]
+[Suggested PR title based on primary commit message using conventional commits]
 
 ## Description
 
@@ -67,15 +67,3 @@ git push -u origin feat/add-login
 
 ### Breaking Changes
 - [Any breaking changes, or "None"]
-
-### Checklist
-- [ ] Tests pass
-- [ ] Documentation updated
-- [ ] No linting errors
-- [ ] PR title follows conventions
-- [ ] Reviewers assigned
-
-### Labels
-- `aw` (required)
-
-**Note:** If label `aw` does not exist in the repository, create it.

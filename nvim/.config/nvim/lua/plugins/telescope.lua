@@ -1,8 +1,6 @@
 return {
   'nvim-telescope/telescope.nvim',
 
-  tag = '0.1.5',
-
   dependencies = { 'nvim-lua/plenary.nvim' },
 
   config = function()
@@ -52,7 +50,7 @@ return {
             "--glob=!**/package-lock.json",
           },
         },
-    },
+      },
     })
 
     vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })

@@ -32,7 +32,7 @@ vim.keymap.set("n", "<C-k>", "<cmd>resize -" .. INT_RESIZE .. "<cr>", { desc = "
 vim.keymap.set("n", "<C-j>", "<cmd>resize +" .. INT_RESIZE .. "<cr>", { desc = "Increase current window height" })
 vim.keymap.set("n", "<C-h>", "<cmd>vertical resize +" .. INT_RESIZE .. "<cr>", { desc = "Increase current window width" })
 vim.keymap.set("n", "<C-l>", "<cmd>vertical resize -" .. INT_RESIZE .. "<cr>",
-  { desc = "Decrease current Increase rent window width" })
+  { desc = "Decrease current window width" })
 
 -- Scrolling
 -- while scrolling up/down, keep the current highlighted line centered horizontally
@@ -54,6 +54,13 @@ vim.keymap.set("n", "<leader>Gh", "<cmd>0Gclog<cr>", { desc = "Git history for c
 
 -- LSP
 vim.keymap.set("n", "<leader>th", "<cmd>ToggleInlayHints<cr>", { desc = "Toggle Inlay Hints" })
+vim.keymap.set("n", "<leader>cd", function()
+  vim.diagnostic.open_float({
+    scope = "cursor",
+    border = "single",
+    focusable = true,
+  })
+end, { desc = "Show diagnostic in float" })
 
 -- WhichKey
 local which_key_enabled

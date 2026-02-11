@@ -28,12 +28,12 @@ require("commands")
 
 -- setup with Lazy.nvim
 require("lazy").setup(
-	"plugins",
-	{
-		ui = {
-			border = "rounded",
-		},
-	}
+  "plugins",
+  {
+    ui = {
+      border = "rounded",
+    },
+  }
 )
 
 -- Add the $CWD as a workspace folder to get
@@ -45,4 +45,5 @@ vim.lsp.buf.add_workspace_folder(vim.fn.getcwd())
 -- vim.cmd.colorscheme("fluoromachine")
 -- vim.cmd.colorscheme("kanagawa")
 -- vim.cmd.colorscheme("vague")
-vim.cmd.colorscheme("evergarden")
+-- vim.cmd.colorscheme("evergarden")
+vim.cmd.colorscheme("rose-pine")

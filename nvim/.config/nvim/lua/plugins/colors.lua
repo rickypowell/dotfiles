@@ -1,5 +1,23 @@
 return {
   {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function()
+      require("rose-pine").setup({
+        variant = "main",
+        dark_variant = "main",
+        italic = false,
+        transparent = true,
+        transparent_background = true,
+        styles = {
+          transparent = true,
+          transparent_background = true,
+          italic = false,
+        }
+      })
+    end,
+  },
+  {
     "maxmx03/fluoromachine.nvim",
     enabled = false,
     lazy = false,

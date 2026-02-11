@@ -36,6 +36,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "rose-pine",
+  callback = function()
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  end,
+})
+
 -- Create an event handler for the FileType autocommand
 -- vim.api.nvim_create_autocmd('FileType', {
 --   -- This handler will fire when the buffer's 'filetype' is "python"

@@ -56,16 +56,3 @@ stow --restow opencode
 if [[ "$OSTYPE" == "darwin"* ]]; then
     stow --restow aerospace
 fi
-
-echo "\x1b[1;36mClone Alacritty themes...\x1b[0m"
-
-# Alacritty themes
-# We use Alacritty's default Linux config directory as our storage location here.
-if [ ! -d "alacritty/.config/alacritty/themes" ]; then
-    mkdir -p alacritty/.config/alacritty/themes
-    git clone https://github.com/alacritty/alacritty-theme alacritty/.config/alacritty/themes
-    echo "\x1b[32mSuccess:\x1b[0m Alacritty themes cloned"
-else
-    echo "\x1b[33mWarning:\x1b[0m Alacritty theme already exists"
-fi
-

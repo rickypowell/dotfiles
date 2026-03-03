@@ -2,7 +2,7 @@ font-family = "BlexMono NF"
 cursor-opacity = 0.8
 adjust-cursor-thickness = 4
 
-background-opacity = 0.88
+background-opacity = 0.8
 background-blur-radius = 55
 
 window-padding-x = 8
@@ -12,10 +12,12 @@ window-title-font-family = "BlexMono NF"
 
 mouse-hide-while-typing = true
 
+theme = Oceanic Next
+# theme = Vesper
 # theme = Catppuccin Mocha
 # theme = Everforest Dark Hard
 # theme = evergarden-winter-skye.yml
-theme = Rose Pine
+# theme = Rose Pine
 
 keybind = alt+j=goto_split:bottom
 keybind = alt+k=goto_split:top

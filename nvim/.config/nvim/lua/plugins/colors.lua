@@ -76,7 +76,7 @@ return {
   },
   {
     "catppuccin/nvim",
-    enabled = false,
+    enabled = true,
     name = "catppuccin",
     lazy = false,
     priority = 1000,

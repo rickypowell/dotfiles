@@ -37,56 +37,51 @@ Use this skill when:
 
 ### Branch Management
 - `but branch list` - List all virtual branches
-- `but branch create <name>` - Create a new virtual branch
+- `but branch new <name>` - Create a new virtual branch
 - `but branch delete <name>` - Delete a virtual branch
-- `but branch apply <name>` - Apply a virtual branch
-- `but branch unapply <name>` - Unapply a virtual branch
+- `but apply <name>` - Apply a virtual branch
+- `but unapply <name>` - Unapply a virtual branch
 
 ### Commit Operations
-- `but commit create` - Create a commit from current changes
-- `but commit amend` - Amend the last commit
-- `but commit list` - List commits
+- `but commit` - Create a commit from current changes
+- `but amend` - Amend changes into a specific commit
 
-### Status and Sync
+### Server Interactions
 - `but status` - Show current status of all virtual branches
-- `but fetch` - Fetch from remotes
+- `but fetch` - Fetch from remotes (hidden command, redirects to `but pull --check`)
 - `but push` - Push virtual branches to remote
 - `but pull` - Pull changes from remote
-
-### Integrations
-- `but sync` - Sync with remote (fetch + rebase)
-- `but integrate` - Integrate branch into another
 
 ## Working with Projects Using GitButler
 
 1. Check for `.gitbutler/config.json` to confirm GitButler is in use
 2. Use `but status` to understand current state
-3. When user wants to create a branch, suggest using `but branch create`
-4. When user wants to commit, use `but commit create`
+3. When user wants to create a branch, suggest using `but branch new`
+4. When user wants to commit, use `but commit`
 5. Be aware of the integration branch - don't manually modify it
 
 ## Common Patterns
 
 ### Creating a Feature Branch
 ```
-but branch create feature/my-feature
-but branch apply feature/my-feature
+but branch new feature/my-feature
+but apply feature/my-feature
 # make changes
-but commit create -m "Add feature"
-but branch unapply feature/my-feature
+but commit -m "Add feature"
+but unapply feature/my-feature
 ```
 
 ### Stacking Branches
 GitButler excels at stacked PRs - create dependent branches:
 ```
-but branch create feature/base
+but branch new feature/base
 # work and commit
-but branch create feature/derived
+but branch new feature/derived
 # work and commit
 ```
 
 ### Syncing with Remote
 ```
 but fetch
-but sync
+git rebase origin/main
 ```

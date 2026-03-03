@@ -51,6 +51,7 @@ stow --restow starship
 stow --restow nvim
 stow --restow ghostty
 stow --restow opencode
+stow --restow amp
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then

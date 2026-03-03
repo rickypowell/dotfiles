@@ -35,6 +35,12 @@ brew install ollama
 brew install anomalyco/tap/opencode
 # install xcbeautify
 brew install xcbeautify
+# xcodebuild MCP
+brew tap getsentry/xcodebuildmcp
+brew install xcodebuildmcp
+# install pnpm
+brew install pnpm
+
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # AeroSpace: https://github.com/nikitabobko/AeroSpace

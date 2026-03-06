@@ -17,6 +17,7 @@ return {
           typescript = { "prettier" },
           typescriptreact = { "prettier" },
           json = { "prettier" },
+          zig = { "zigfmt" },
           -- swift = { "swift" },
         },
 

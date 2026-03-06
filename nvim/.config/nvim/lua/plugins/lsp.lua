@@ -144,6 +144,24 @@ return {
             vim.lsp.enable(server_name)
           end,
 
+          ["zls"] = function(server_name)
+            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+            vim.lsp.config(server_name, {
+              capabilities = capabilities,
+              settings = {
+                zls = {
+                  enable_build_on_save = true,
+                  semantic_tokens = "full",
+                  warn_style = true,
+                  inlay_hints_show_builtin = true,
+                },
+              },
+            })
+            vim.lsp.enable(server_name)
+          end,
+
           ["lua_ls"] = function()
             vim.lsp.config("lua_ls", {
               settings = {

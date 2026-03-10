@@ -23,6 +23,7 @@ vim.opt.laststatus = 3
 
 -- True colors
 vim.opt.termguicolors = true
+vim.opt.winborder = "single"
 
 -- Code folding
 vim.opt.foldmethod = "expr"

@@ -15,7 +15,7 @@ vim.opt.cursorline = true
 vim.opt.guicursor = "n-v-c-sm:block-blinkwait175-blinkon175,i-ci-ve:ver25,r-cr-o:hor20"
 vim.opt.winbar = "%=%m %f"
 vim.opt.number = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 vim.opt.numberwidth = 4
 
 vim.g.netrw_liststyle = 3

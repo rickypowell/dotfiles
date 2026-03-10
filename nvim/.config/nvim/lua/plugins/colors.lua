@@ -1,5 +1,17 @@
 return {
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      styles = {
+        keywords = { italic = false },
+        comments = { italic = false },
+      },
+    },
+  },
+  {
     "rose-pine/neovim",
     name = "rose-pine",
     config = function()

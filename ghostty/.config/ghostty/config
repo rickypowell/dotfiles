@@ -12,10 +12,12 @@ window-title-font-family = "BlexMono NF"
 
 mouse-hide-while-typing = true
 
-theme = Oceanic Next
+# theme = TokyoNight
+# theme = Violite
+# theme = Oceanic Next
 # theme = Vesper
 # theme = Catppuccin Mocha
-# theme = Everforest Dark Hard
+theme = Everforest Dark Hard
 # theme = evergarden-winter-skye.yml
 # theme = Rose Pine
 

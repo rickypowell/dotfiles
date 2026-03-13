@@ -1,5 +1,16 @@
 return {
   {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      italic = {
+        strings = false,
+        emphasis = false,
+        comments = false,
+      },
+      transparent_mode = true,
+    },
+  },
+  {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,

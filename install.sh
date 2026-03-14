@@ -17,8 +17,10 @@ brew install gh
 brew install glab
 # install Ghostty
 brew install --cask ghostty
-# install zig
-brew install zig
+# install zig with zvm (skip if already installed)
+if ! command -v zvm &> /dev/null; then
+    curl https://www.zvm.app/install.sh | bash
+fi
 # install bun
 # refer: https://bun.sh/
 brew install oven-sh/bun/bun

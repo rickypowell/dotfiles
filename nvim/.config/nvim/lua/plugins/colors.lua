@@ -1,5 +1,13 @@
 return {
   {
+    "EdenEast/nightfox.nvim",
+    opts = {
+      options = {
+        transparent = true,
+      }
+    },
+  },
+  {
     "ellisonleao/gruvbox.nvim",
     opts = {
       italic = {

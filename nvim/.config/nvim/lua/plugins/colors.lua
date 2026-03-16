@@ -1,12 +1,20 @@
 return {
   {
-    "EdenEast/nightfox.nvim",
+    "projekt0n/github-nvim-theme",
+    name = 'github-theme',
     opts = {
       options = {
         transparent = true,
-      }
+      },
     },
+  }, {
+  "EdenEast/nightfox.nvim",
+  opts = {
+    options = {
+      transparent = true,
+    }
   },
+},
   {
     "ellisonleao/gruvbox.nvim",
     opts = {

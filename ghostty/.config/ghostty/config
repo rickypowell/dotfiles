@@ -22,7 +22,8 @@ mouse-hide-while-typing = true
 # theme = Rose Pine
 # theme = Gruvbox Dark
 # theme = Kanagawa Wave
-theme = Nightfox
+# theme = Nightfox
+theme = GitHub Dark High Contrast
 
 keybind = alt+j=goto_split:bottom
 keybind = alt+k=goto_split:top

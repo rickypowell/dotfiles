@@ -17,6 +17,14 @@ brew install gh
 brew install glab
 # install Ghostty
 brew install --cask ghostty
+# install terminal fonts used by Ghostty
+if ! brew list --cask font-blex-mono-nerd-font &> /dev/null; then
+    brew install --cask font-blex-mono-nerd-font
+fi
+
+if ! brew list --cask font-dm-mono &> /dev/null; then
+    brew install --cask font-dm-mono
+fi
 # install zig with zvm (skip if already installed)
 if ! command -v zvm &> /dev/null; then
     curl https://www.zvm.app/install.sh | bash

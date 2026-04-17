@@ -50,6 +50,8 @@ brew tap getsentry/xcodebuildmcp
 brew install xcodebuildmcp
 # install pnpm
 brew install pnpm
+# install glow for markdown previews
+brew install glow
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then

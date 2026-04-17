@@ -1,4 +1,5 @@
-font-family = "BlexMono NF"
+# font-family = "BlexMono NF"
+font-family = "DM Mono"
 cursor-opacity = 0.8
 adjust-cursor-thickness = 4
 
@@ -23,7 +24,11 @@ mouse-hide-while-typing = true
 # theme = Gruvbox Dark
 # theme = Kanagawa Wave
 # theme = Nightfox
-theme = GitHub Dark High Contrast
+# theme = GitHub Dark High Contrast
+# theme = Terafox
+# theme = nasa-mission-control
+theme = Carbonfox
+# theme = Ghostty Default Style Dark
 
 keybind = alt+j=goto_split:bottom
 keybind = alt+k=goto_split:top

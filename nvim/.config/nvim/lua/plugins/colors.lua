@@ -1,5 +1,16 @@
 return {
   {
+    "nkxxll/ghostty-default-style-dark.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        comments = { italic = false },
+        keywords = { italic = false },
+      },
+      lualine_bold = true,
+    },
+  },
+  {
     "projekt0n/github-nvim-theme",
     name = 'github-theme',
     opts = {

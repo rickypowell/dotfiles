@@ -52,6 +52,8 @@ brew install xcodebuildmcp
 brew install pnpm
 # install glow for markdown previews
 brew install glow
+# install go lang for regols
+brew install golang
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then

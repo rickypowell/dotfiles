@@ -59,6 +59,7 @@ return {
           "vimls",
           "yamlls",
           "zls",
+          "regols",
         },
         handlers = {
           function(server_name)

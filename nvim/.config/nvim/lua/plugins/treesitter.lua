@@ -24,6 +24,7 @@ return {
         "terraform",
         "hcl",
         "zig",
+        "rego",
       },
       -- sync_install = false,
       highlight = { enable = true },
@@ -40,7 +41,9 @@ return {
     },
 
     config = function()
-      require("nvim-treesitter.configs").setup({
+      local move = require("nvim-treesitter-textobjects.move")
+      local configs = require("nvim-treesitter.config")
+      configs.setup({
         ensure_installed = {
           "c",
           "lua",
@@ -56,14 +59,14 @@ return {
           "markdown",
           "markdown_inline",
           "zig",
+          "rego",
         },
         sync_install = false,
         fold = { enable = true },
       })
       -- When in diff mode, we want to use the default
       -- vim text objects c & C instead of the treesitter ones.
-      local move = require("nvim-treesitter.textobjects.move") ---@type table<string,fun(...)>
-      local configs = require("nvim-treesitter.configs")
+      -- local move =  ---@type table<string,fun(...)>
       for name, fn in pairs(move) do
         if name:find("goto") == 1 then
           move[name] = function(q, ...)

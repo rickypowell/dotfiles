@@ -48,6 +48,8 @@ brew install xcbeautify
 # xcodebuild MCP
 brew tap getsentry/xcodebuildmcp
 brew install xcodebuildmcp
+# xcode-build-server for nvim plugin xcodebuild.nvim
+brew install xcode-build-server
 # install pnpm
 brew install pnpm
 # install glow for markdown previews

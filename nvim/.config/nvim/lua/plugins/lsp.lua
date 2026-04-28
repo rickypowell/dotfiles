@@ -201,17 +201,23 @@ return {
       vim.keymap.set('n', ']dzz', vim.diagnostic.goto_next, { desc = "Diagnostic next" })
 
       -- float windows with borders
-      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-        vim.lsp.handlers.hover, {
-          border = "single",
-        }
-      )
+      local hover_opts = {
+        border = "single",
+      }
+      vim.lsp.handlers["textDocument/hover"] = function(err, result, ctx, config)
+        config = config or {}
+        config.border = hover_opts.border
+        return vim.lsp.handlers.hover(err, result, ctx, config)
+      end
 
-      vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-        vim.lsp.handlers.signature_help, {
-          border = "single",
-        }
-      )
+      local signature_opts = {
+        border = "single",
+      }
+      vim.lsp.handlers["textDocument/signatureHelp"] = function(err, result, ctx, config)
+        config = config or {}
+        config.border = signature_opts.border
+        return vim.lsp.handlers.signature_help(err, result, ctx, config)
+      end
 
       -- completions
       local cmp = require("cmp")

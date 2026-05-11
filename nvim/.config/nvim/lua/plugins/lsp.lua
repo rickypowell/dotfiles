@@ -197,8 +197,17 @@ return {
 
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-      vim.keymap.set('n', '[dzz', vim.diagnostic.goto_prev, { desc = "Diagnostic previous" })
-      vim.keymap.set('n', ']dzz', vim.diagnostic.goto_next, { desc = "Diagnostic next" })
+      local function jump_to_diagnostic(navigate)
+        navigate()
+        vim.cmd("normal! zz")
+      end
+
+      vim.keymap.set("n", "[d", function()
+        jump_to_diagnostic(vim.diagnostic.goto_prev)
+      end, { desc = "Diagnostic previous" })
+      vim.keymap.set("n", "]d", function()
+        jump_to_diagnostic(vim.diagnostic.goto_next)
+      end, { desc = "Diagnostic next" })
 
       -- float windows with borders
       local hover_opts = {

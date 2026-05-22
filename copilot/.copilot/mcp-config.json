@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "XcodeBuildMCP": {
+      "type": "local",
+      "command": "xcodebuildmcp",
+      "args": ["mcp"],
+      "tools": [
+        "session_show_defaults",
+        "session_set_defaults",
+        "sync_xcode_defaults",
+        "discover_projs",
+        "list_schemes",
+        "show_build_settings",
+        "list_sims",
+        "boot_sim",
+        "open_sim",
+        "build_sim",
+        "build_run_sim",
+        "test_sim",
+        "list_devices",
+        "build_device",
+        "test_device",
+        "build_macos",
+        "build_run_macos",
+        "test_macos",
+        "clean",
+        "doctor"
+      ]
+    }
+  }
+}

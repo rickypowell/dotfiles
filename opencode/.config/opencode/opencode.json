@@ -1,94 +1,114 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "autoupdate": true,
-  "plugin": ["./plugins/osascript-notifications.js"],
-  "permission": {
-    "glob": "allow",
-    "grep": "allow",
-    "list": "allow",
-    "lsp": "allow",
-    "read": "allow",
-    "bash": {
-      "*": "ask",
-      "awk *": "allow",
-      "cat *": "allow",
-      "cd *": "allow",
-      "echo *": "allow",
-      "find *": "allow",
-      "gh issue view *": "allow",
-      "gh pr diff *": "allow",
-      "gh pr checks *": "allow",
-      "gh pr view *": "allow",
-      "git *": "allow",
-      "git push *": "ask",
-      "grep *": "allow",
-      "head *": "allow",
-      "ls *": "allow",
-      "npm *": "allow",
-      "npm install *": "ask",
-      "rg *": "allow",
-      "rm *": "ask",
-      "sed *": "ask",
-      "tail *": "allow",
-      "wc *": "allow",
-      "xcbeautify": "allow",
-      "xcodebuild *": "allow",
-      "xcrun *": "allow",
-      "swiftc *": "allow"
-    },
-    "webfetch": "allow"
-  },
-  "provider": {
-    "lmstudio": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "LM Studio (local)",
-      "options": {
-        "baseURL": "http://127.0.0.1:1234/v1"
-      },
-      "models": {
-        "google/gemma-3-12b": {
-          "name": "google/gemma-3-12b"
-        },
-        "mistralai/devstral-small-2-2512": {
-          "name": "mistralai/devstral-small-2-2512"
-        },
-        "mistralai/ministral-3-14b-reasoning": {
-          "name": "mistralai/ministral-3-14b-reasoning"
-        },
-        "qwen/qwen2.5-coder-14b": {
-          "name": "qwen/qwen2.5-coder-14b"
-        },
-        "qwen/qwen3-14b": {
-          "name": "qwen/qwen3-14b"
-        },
-        "qwen/qwen3-8b": {
-          "name": "qwen/qwen3-8b"
-        },
-        "qwen/qwen3-4b": {
-          "name": "qwen/qwen3-4b"
-        },
-        "qwen/qwen3-vl-8b": {
-          "name": "qwen/qwen3-vl-8b"
-        },
-        "zai-org/glm-4.6v-flash": {
-          "name": "zai-org/glm-4.6v-flash"
+    "$schema": "https://opencode.ai/config.json",
+    "autoupdate": true,
+    "plugin": [
+        "./plugins/osascript-notifications.js"
+    ],
+    "mcp": {
+        "xcodebuildmcp": {
+            "type": "local",
+            "command": [
+                "xcodebuildmcp",
+                "mcp"
+            ]
         }
-      }
     },
-    "ollama": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Ollama",
-      "options": {
-        "baseURL": "http://localhost:11434/v1"
-      },
-      "models": {
-        "ministral-3:8b": {
-          "name": "ministral-3:8b"
+    "permission": {
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "lsp": "allow",
+        "read": "allow",
+        "bash": {
+            "*": "ask",
+            "awk *": "allow",
+            "cat *": "allow",
+            "cd *": "allow",
+            "echo *": "allow",
+            "find *": "allow",
+            "gh issue view *": "allow",
+            "gh pr diff *": "allow",
+            "gh pr checks *": "allow",
+            "gh pr view *": "allow",
+            "git *": "allow",
+            "git push *": "ask",
+            "grep *": "allow",
+            "head *": "allow",
+            "ls *": "allow",
+            "npm *": "allow",
+            "npm install *": "ask",
+            "rg *": "allow",
+            "rm *": "ask",
+            "sed *": "ask",
+            "tail *": "allow",
+            "wc *": "allow",
+            "xcbeautify": "allow",
+            "xcodebuild *": "allow",
+            "xcrun *": "allow",
+            "swiftc *": "allow"
         },
-        "ministral-3:14b": {
-          "name": "ministral-3:14b"
+        "webfetch": "allow"
+    },
+    "provider": {
+        "lmstudio": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "LM Studio (local)",
+            "options": {
+                "baseURL": "http://127.0.0.1:1234/v1"
+            },
+            "models": {
+                "google/gemma-4-31b-qat": {
+                    "name": "google/gemma-4-31b-qat"
+                },
+                "google/gemma-4-26b-a4b-qat": {
+                    "name": "google/gemma-4-26b-a4b-qat"
+                },
+                "google/gemma-3-12b": {
+                    "name": "google/gemma-3-12b"
+                },
+                "mistralai/devstral-small-2-2512": {
+                    "name": "mistralai/devstral-small-2-2512"
+                },
+                "mistralai/ministral-3-14b-reasoning": {
+                    "name": "mistralai/ministral-3-14b-reasoning"
+                },
+                "qwen/qwen3.6-35b-a3b": {
+                    "name": "qwen/qwen3.6-35b-a3b"
+                },
+                "qwen/qwen2.5-coder-14b": {
+                    "name": "qwen/qwen2.5-coder-14b"
+                },
+                "qwen/qwen3-14b": {
+                    "name": "qwen/qwen3-14b"
+                },
+                "qwen/qwen3-8b": {
+                    "name": "qwen/qwen3-8b"
+                },
+                "qwen/qwen3-4b": {
+                    "name": "qwen/qwen3-4b"
+                },
+                "qwen/qwen3-vl-8b": {
+                    "name": "qwen/qwen3-vl-8b"
+                },
+                "zai-org/glm-4.6v-flash": {
+                    "name": "zai-org/glm-4.6v-flash"
+                }
+            }
+        },
+        "ollama": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "Ollama",
+            "options": {
+                "baseURL": "http://localhost:11434/v1"
+            },
+            "models": {
+                "ministral-3:8b": {
+                    "name": "ministral-3:8b"
+                },
+                "ministral-3:14b": {
+                    "name": "ministral-3:14b"
+                }
+            }
         }
-      }
     }
-  }
 }

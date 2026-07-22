@@ -2,6 +2,12 @@
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": true,
   "plugin": ["./plugins/osascript-notifications.js"],
+  "mcp": {
+    "xcodebuildmcp": {
+      "type": "local",
+      "command": ["xcodebuildmcp", "mcp"]
+    }
+  },
   "permission": {
     "glob": "allow",
     "grep": "allow",

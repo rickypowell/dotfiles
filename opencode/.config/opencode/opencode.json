@@ -58,6 +58,12 @@
         "ternary-bonsai-27b-mlx": {
           "name": "ternary-bonsai-27b-mlx"
         },
+        "google/gemma-4-31b-qat": {
+          "name": "google/gemma-4-31b-qat"
+        },
+        "google/gemma-4-26b-a4b-qat": {
+          "name": "google/gemma-4-26b-a4b-qat"
+        },
         "google/gemma-3-12b": {
           "name": "google/gemma-3-12b"
         },

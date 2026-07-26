@@ -16,7 +16,7 @@ return {
           javascript = { "prettier" },
           typescript = { "prettier" },
           typescriptreact = { "prettier" },
-          json = { "prettier" },
+          -- json = { "prettier" },
           zig = { "zigfmt" },
           rego = { "opa_fmt" },
           -- swift = { "swift" },

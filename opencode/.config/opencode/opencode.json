@@ -66,9 +66,6 @@
                 "baseURL": "http://127.0.0.1:1234/v1"
             },
             "models": {
-                "qwen/qwen3.6-35b-a3b": {
-                    "name": "qwen/qwen3.6-35b-a3b"
-                },
                 "ternary-bonsai-27b-mlx": {
                     "name": "ternary-bonsai-27b-mlx"
                 },
@@ -86,6 +83,9 @@
                 },
                 "mistralai/ministral-3-14b-reasoning": {
                     "name": "mistralai/ministral-3-14b-reasoning"
+                },
+                "qwen/qwen3.6-35b-a3b": {
+                    "name": "qwen/qwen3.6-35b-a3b"
                 },
                 "qwen/qwen2.5-coder-14b": {
                     "name": "qwen/qwen2.5-coder-14b"

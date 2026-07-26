@@ -1,7 +1,7 @@
 {
     "$schema": "https://opencode.ai/config.json",
     "autoupdate": true,
-    "small_model": "ternary-bonsai-27b-mlx",
+    "small_model": "lmstudio/ternary-bonsai-27b-mlx",
     "plugin": [
         "./plugins/osascript-notifications.js"
     ],

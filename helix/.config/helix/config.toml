@@ -1,0 +1,28 @@
+theme = "base16_transparent"
+
+[editor]
+line-number = "relative"
+cursorline = true
+auto-format = false
+color-modes = true
+popup-border = "all"
+end-of-line-diagnostics = "hint"
+
+[editor.statusline]
+right = ["diagnostics", "version-control", "selections", "register", "position", "file-type", "file-encoding"]
+diagnostics = ["hint", "warning", "error"]
+
+[editor.lsp]
+display-progress-messages = true
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "warning"

@@ -7,6 +7,8 @@ brew install stow
 brew install starship
 # Neovim install
 brew install nvim
+# Install Helix; post-modern text editor
+brew install helix
 # Install ripgrep for grep search in Telescope
 brew install ripgrep
 # Install fd for `find` search in Telescope
@@ -71,6 +73,7 @@ echo "\x1b[1;36mRestow...\x1b[0m"
 
 stow --restow starship
 stow --restow nvim
+stow --restow helix
 stow --restow ghostty
 stow --restow opencode
 stow --restow amp

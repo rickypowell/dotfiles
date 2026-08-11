@@ -13,7 +13,7 @@ window-title-font-family = "BlexMono Nerd Font"
 
 mouse-hide-while-typing = true
 
-# theme = TokyoNight
+theme = TokyoNight
 # theme = Violite
 # theme = Oceanic Next
 # theme = Vesper
@@ -25,7 +25,7 @@ mouse-hide-while-typing = true
 # theme = Kanagawa Wave
 # theme = Nightfox
 # theme = GitHub Dark High Contrast
-theme = Terafox
+# theme = Terafox
 # theme = nasa-mission-control
 # theme = Carbonfox
 # theme = Ghostty Default Style Dark

@@ -2,7 +2,7 @@
 name = "terminal"
 
 [ui.toast]
-delivery = "terminal"
+delivery = "system"
 
 [ui.sound]
 enabled = true

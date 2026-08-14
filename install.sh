@@ -58,6 +58,8 @@ brew install pnpm
 brew install glow
 # install go lang for regols
 brew install golang
+# install herdr terminal workspace manager for AI coding agents
+brew install herdr
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -78,6 +80,7 @@ stow --restow ghostty
 stow --restow opencode
 stow --restow amp
 stow --restow copilot
+stow --restow herder
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then

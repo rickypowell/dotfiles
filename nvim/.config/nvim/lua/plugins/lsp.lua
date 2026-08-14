@@ -30,6 +30,33 @@ return {
     },
 
     config = function()
+      local function project_python(root_dir)
+        local local_python = root_dir .. "/.venv/bin/python"
+        if vim.fn.executable(local_python) == 1 then
+          return local_python
+        end
+
+        local result = vim.system(
+          { "poetry", "env", "info", "--executable" },
+          { cwd = root_dir, text = true }
+        ):wait()
+
+        if result.code == 0 then
+          local poetry_python = vim.trim(result.stdout)
+          if vim.fn.executable(poetry_python) == 1 then
+            return poetry_python
+          end
+        end
+
+        return vim.fn.exepath("python3")
+      end
+
+      vim.lsp.config("pyright", {
+        before_init = function(_, config)
+          config.settings.python.pythonPath = project_python(config.root_dir)
+        end,
+      })
+
       require("mason").setup({
         ui = {
           border = "rounded",

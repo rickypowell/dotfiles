@@ -22,7 +22,7 @@ vim.g.netrw_liststyle = 3
 vim.opt.laststatus = 3
 
 -- True colors
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 vim.opt.winborder = "single"
 
 -- Code folding

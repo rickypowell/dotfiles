@@ -36,17 +36,13 @@ require("lazy").setup(
   }
 )
 
--- Add the $CWD as a workspace folder to get
--- the vim.lsp.buf.references() amoung all of the repo
-vim.lsp.buf.add_workspace_folder(vim.fn.getcwd())
-
 -- settings
 -- vim.cmd.colorscheme("catppuccin")
 -- vim.cmd.colorscheme("fluoromachine")
 -- vim.cmd.colorscheme("kanagawa")
 -- vim.cmd.colorscheme("vague")
 -- Goes best with "Oceanic Next"
-vim.cmd.colorscheme("evergarden")
+-- vim.cmd.colorscheme("evergarden")
 -- vim.cmd.colorscheme("rose-pine")
 -- vim.cmd.colorscheme("gruvbox")
 -- vim.cmd.colorscheme("kanagawa-paper-ink")

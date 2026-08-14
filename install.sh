@@ -9,6 +9,14 @@ brew install starship
 brew install nvim
 # Install Helix; post-modern text editor
 brew install helix
+# Python language servers and formatter for Helix
+brew install ty
+brew install ruff
+brew install python-lsp-server
+brew install pipx
+if ! command -v jedi-language-server &> /dev/null; then
+    pipx install jedi-language-server
+fi
 # Install ripgrep for grep search in Telescope
 brew install ripgrep
 # Install fd for `find` search in Telescope

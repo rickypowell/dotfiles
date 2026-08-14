@@ -88,7 +88,7 @@ stow --restow ghostty
 stow --restow opencode
 stow --restow amp
 stow --restow copilot
-stow --restow herder
+stow --restow herdr
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then

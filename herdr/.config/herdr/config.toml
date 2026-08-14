@@ -1,2 +1,8 @@
 [theme]
 name = "terminal"
+
+[ui.toast]
+delivery = "terminal"
+
+[ui.sound]
+enabled = true

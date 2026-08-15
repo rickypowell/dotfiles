@@ -92,6 +92,9 @@
                 "qwen/qwen3.6-35b-a3b": {
                     "name": "qwen/qwen3.6-35b-a3b"
                 },
+                "qwen/qwen3.8-27b": {
+                    "name": "qwen/qwen3.8-27b"
+                },
                 "qwen/qwen2.5-coder-14b": {
                     "name": "qwen/qwen2.5-coder-14b"
                 },

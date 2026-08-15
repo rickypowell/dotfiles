@@ -58,7 +58,10 @@
       "mdutil *": "allow",
       "systemsetup *": "allow",
       "security *": "allow",
-      "security *": "allow",
+      "*": "ask"
+    },
+    "external_directory": {
+      "~/.herdr/**": "allow",
       "*": "ask"
     }
   }

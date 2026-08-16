@@ -62,7 +62,6 @@
     },
     "external_directory": {
       "$HOME/.herdr/**": "allow",
-      "$HOME/.herdr/worktrees/*": "allow",
       "*": "ask"
     }
   }

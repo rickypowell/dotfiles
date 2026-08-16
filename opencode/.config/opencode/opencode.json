@@ -3,6 +3,9 @@
     "autoupdate": true,
     "default_agent": "build",
     "small_model": "lmstudio/laguna-xs-2.1-nvfp4-mlx",
+    "instructions": [
+        "rules/herdr-agent-work.md"
+    ],
     "plugin": [
         "./plugins/osascript-notifications.js"
     ],

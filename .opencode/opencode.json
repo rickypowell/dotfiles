@@ -61,8 +61,8 @@
       "*": "ask"
     },
     "external_directory": {
-      "/Users/rickypowell/.herdr/**": "allow",
-      "/Users/rickypowell/.herdr/worktrees/*": "allow",
+      "$HOME/.herdr/**": "allow",
+      "$HOME/.herdr/worktrees/*": "allow",
       "*": "ask"
     }
   }

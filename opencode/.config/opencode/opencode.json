@@ -38,7 +38,6 @@
         "lsp": "allow",
         "read": "allow",
         "bash": {
-            "*": "ask",
             "awk *": "allow",
             "brew list *": "allow",
             "bun *": "allow",
@@ -52,7 +51,6 @@
             "gh pr checks *": "allow",
             "gh pr view *": "allow",
             "git *": "allow",
-            "git push *": "ask",
             "grep *": "allow",
             "head *": "allow",
             "herdr *": "allow",
@@ -62,11 +60,9 @@
             "mv *": "allow",
             "node *": "allow",
             "npm *": "allow",
-            "npm install *": "ask",
             "python3 *": "allow",
             "rg *": "allow",
-            "rm *": "ask",
-            "sed *": "ask",
+            "sed *": "allow",
             "tail *": "allow",
             "touch *": "allow",
             "wc *": "allow",
@@ -74,7 +70,11 @@
             "xcbeautify": "allow",
             "xcodebuild *": "allow",
             "xcrun *": "allow",
-            "swiftc *": "allow"
+            "swiftc *": "allow",
+            "git push *": "ask",
+            "npm install *": "ask",
+            "rm *": "ask",
+            "*": "ask"
         },
         "webfetch": "allow"
     },

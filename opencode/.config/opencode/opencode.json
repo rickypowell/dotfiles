@@ -38,6 +38,7 @@
         "lsp": "allow",
         "read": "allow",
         "bash": {
+            "*": "ask",
             "awk *": "allow",
             "brew list *": "allow",
             "bun *": "allow",
@@ -73,8 +74,7 @@
             "swiftc *": "allow",
             "git push *": "ask",
             "npm install *": "ask",
-            "rm *": "ask",
-            "*": "ask"
+            "rm *": "ask"
         },
         "webfetch": "allow"
     },

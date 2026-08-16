@@ -58,6 +58,7 @@
             "jq *": "allow",
             "ls *": "allow",
             "mkdir *": "allow",
+            "cd *": "ask",
             "mv *": "allow",
             "node *": "allow",
             "npm *": "allow",

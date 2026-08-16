@@ -61,7 +61,7 @@
       "*": "ask"
     },
     "external_directory": {
-      "~/.herdr/**": "allow",
+      "$HOME/.herdr/**": "allow",
       "*": "ask"
     }
   }

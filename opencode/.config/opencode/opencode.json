@@ -38,7 +38,7 @@
         "lsp": "allow",
         "read": "allow",
         "bash": {
-            "*": "ask",
+            "*": "allow",
             "awk *": "allow",
             "brew list *": "allow",
             "bun *": "allow",

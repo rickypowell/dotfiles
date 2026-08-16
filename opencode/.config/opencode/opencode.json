@@ -38,7 +38,7 @@
         "lsp": "allow",
         "read": "allow",
         "bash": {
-            "*": "ask",
+            "*": "allow",
             "awk *": "allow",
             "brew list *": "allow",
             "bun *": "allow",
@@ -58,6 +58,7 @@
             "jq *": "allow",
             "ls *": "allow",
             "mkdir *": "allow",
+            "cd *": "ask",
             "mv *": "allow",
             "node *": "allow",
             "npm *": "allow",

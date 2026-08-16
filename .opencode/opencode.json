@@ -61,7 +61,12 @@
       "*": "ask"
     },
     "external_directory": {
+<<<<<<< HEAD
       "$HOME/.herdr/**": "allow",
+=======
+      "/Users/rickypowell/.herdr/**": "allow",
+      "/Users/rickypowell/.herdr/worktrees/*": "allow",
+>>>>>>> 3856b95 (fix(opencode): use absolute path for .herdr external_directory permission)
       "*": "ask"
     }
   }

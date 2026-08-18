@@ -1,0 +1,13 @@
+[language-server.pyright]
+command = "poetry"
+args = ["run", "pyright-langserver", "--stdio"]
+
+[language-server.ruff]
+command = "poetry"
+args = ["run", "ruff", "server"]
+
+[[language]]
+name = "python"
+roots = ["pyproject.toml", "poetry.lock"]
+language-servers = ["pyright", "ruff"]
+auto-format = true

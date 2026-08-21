@@ -21,6 +21,7 @@ We create todos every time we create a plan.
 ├── ghostty/            # Ghostty terminal config
 ├── nvim/               # Neovim configuration (Lua)
 ├── opencode/           # OpenCode plugins (TypeScript/JavaScript)
+├── pi/                 # pi coding-agent config
 └── starship/           # Starship prompt config
 ```
 

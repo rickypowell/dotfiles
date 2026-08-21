@@ -80,7 +80,11 @@
             "npm install *": "ask",
             "rm *": "ask"
         },
-        "webfetch": "allow"
+        "webfetch": "allow",
+        "external_directory": {
+            "**/.herdr/**": "allow",
+            "~/.herdr/**": "allow"
+        }
     },
     "provider": {
         "lmstudio": {

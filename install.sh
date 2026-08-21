@@ -68,14 +68,8 @@ brew install glow
 brew install golang
 # install herdr terminal workspace manager for AI coding agents
 brew install herdr
-# install node via npm for pi (skip if already installed)
-if ! command -v npm &> /dev/null; then
-    brew install node
-fi
-# install pi coding agent (skip if already installed)
-if ! command -v pi &> /dev/null; then
-    npm install -g --ignore-scripts @earendil-works/pi-coding-agent
-fi
+# install pi coding agent
+brew install pi-coding-agent
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then

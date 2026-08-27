@@ -31,20 +31,31 @@ return {
 
     config = function()
       local function project_python(root_dir)
-        local local_python = root_dir .. "/.venv/bin/python"
-        if vim.fn.executable(local_python) == 1 then
-          return local_python
+        -- root_dir can be nil when opening a standalone file with no project markers
+        if type(root_dir) ~= "string" or root_dir == "" or vim.fn.isdirectory(root_dir) == 0 then
+          root_dir = vim.uv.cwd()
         end
 
-        local result = vim.system(
-          { "poetry", "env", "info", "--executable" },
-          { cwd = root_dir, text = true }
-        ):wait()
+        if root_dir then
+          local local_python = root_dir .. "/.venv/bin/python"
+          if vim.fn.executable(local_python) == 1 then
+            return local_python
+          end
 
-        if result.code == 0 then
-          local poetry_python = vim.trim(result.stdout)
-          if vim.fn.executable(poetry_python) == 1 then
-            return poetry_python
+          if vim.fn.executable("poetry") == 1 then
+            local ok, result = pcall(function()
+              return vim.system(
+                { "poetry", "env", "info", "--executable" },
+                { cwd = root_dir, text = true }
+              ):wait()
+            end)
+
+            if ok and result.code == 0 and result.stdout then
+              local poetry_python = vim.trim(result.stdout)
+              if vim.fn.executable(poetry_python) == 1 then
+                return poetry_python
+              end
+            end
           end
         end
 
@@ -52,8 +63,14 @@ return {
       end
 
       vim.lsp.config("pyright", {
-        before_init = function(_, config)
-          config.settings.python.pythonPath = project_python(config.root_dir)
+        before_init = function(params, config)
+          local root_dir = config.root_dir
+            or (params and params.rootPath)
+            or (params and params.rootUri and vim.uri_to_fname(params.rootUri))
+
+          config.settings = config.settings or {}
+          config.settings.python = config.settings.python or {}
+          config.settings.python.pythonPath = project_python(root_dir)
         end,
       })
 
@@ -154,7 +171,9 @@ return {
 
             vim.lsp.config(server_name, {
               capabilities = capabilities,
-              root_dir = vim.lsp.config.root_pattern({ ".git" }),
+              root_dir = function(bufnr, on_dir)
+                on_dir(vim.fs.root(bufnr, { "tsconfig.json", "jsconfig.json", "package.json", ".git" }))
+              end,
               settings = {
                 typescript = {
                   inlayHints = {

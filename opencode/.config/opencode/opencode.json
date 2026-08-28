@@ -6,9 +6,6 @@
     "instructions": [
         "rules/herdr-agent-work.md"
     ],
-    "plugin": [
-        "./plugins/osascript-notifications.js"
-    ],
     "mcp": {
         "xcodebuildmcp": {
             "type": "local",
@@ -61,7 +58,6 @@
             "jq *": "allow",
             "ls *": "allow",
             "mkdir *": "allow",
-            "cd *": "ask",
             "mv *": "allow",
             "node *": "allow",
             "npm *": "allow",
@@ -82,7 +78,8 @@
         },
         "webfetch": "allow",
         "external_directory": {
-            "**/.herdr/**": "allow",
+            "~/.config/herdr/**": "allow",
+            "/.herdr/**": "allow",
             "~/.herdr/**": "allow"
         }
     },

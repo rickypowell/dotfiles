@@ -53,12 +53,12 @@ return {
       },
     })
 
-    vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
+    vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
     vim.keymap.set("n", "<leader>p", "<cmd>Telescope oldfiles prompt_title=Recent<cr>", { desc = "Find recent files" })
-    vim.keymap.set("n", "<leader>fl", "<cmd>Telescope live_grep<cr>", { desc = "Live grep" })
-    vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
-    vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Find help tags" })
-    vim.keymap.set("n", "<leader>fp", "<cmd>Telescope pickers<cr>", { desc = "Find pickers from cache" })
-    vim.keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>", { desc = "Find git files" })
+    vim.keymap.set("n", "<leader>/", "<cmd>Telescope live_grep<cr>", { desc = "Live grep" })
+    vim.keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
+    -- vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Find help tags" })
+    vim.keymap.set("n", "<leader>'", "<cmd>Telescope pickers<cr>", { desc = "Find pickers from cache" })
+    vim.keymap.set("n", "<leader>g", "<cmd>Telescope git_files<cr>", { desc = "Find git files" })
   end
 }

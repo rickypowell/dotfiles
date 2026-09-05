@@ -9,6 +9,10 @@ brew install starship
 brew install nvim
 # Lua lsp
 brew install lua-language-server
+# Tree-sitter
+brew install tree-sitter
+# Tree-sitter cli; to verify, `tree-sitter --version`
+npm install --global tree-sitter-cli
 # Install Helix; post-modern text editor
 brew install helix
 # Python language servers and formatter for Helix

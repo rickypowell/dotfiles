@@ -1,6 +1,7 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
+  version = "v3.17.0",
   init = function()
     vim.o.timeout = true
     vim.o.timeoutlen = 300
@@ -9,6 +10,6 @@ return {
     -- your configuration comes here
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
+    preset = "helix",
   }
 }
-

@@ -7,6 +7,8 @@ brew install stow
 brew install starship
 # Neovim install
 brew install nvim
+# Lua lsp
+brew install lua-language-server
 # Install Helix; post-modern text editor
 brew install helix
 # Python language servers and formatter for Helix

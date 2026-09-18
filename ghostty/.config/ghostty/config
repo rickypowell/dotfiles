@@ -3,8 +3,9 @@ font-family = "BlexMono Nerd Font"
 cursor-opacity = 0.8
 adjust-cursor-thickness = 4
 
-background-opacity = 0.97
+background-opacity = 0.86
 background-blur-radius = 55
+# background = #1C1D1E
 
 window-padding-x = 8
 window-padding-y = 4
@@ -13,7 +14,8 @@ window-title-font-family = "BlexMono Nerd Font"
 
 mouse-hide-while-typing = true
 
-theme = TokyoNight
+theme = Ayu
+# theme = TokyoNight
 # theme = Violite
 # theme = Oceanic Next
 # theme = Vesper

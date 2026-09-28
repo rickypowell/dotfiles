@@ -95,7 +95,6 @@ stow --restow helix
 stow --restow ghostty
 stow --restow opencode
 stow --restow amp
-stow --restow copilot
 stow --restow herdr
 stow --restow pi
 

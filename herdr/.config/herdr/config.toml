@@ -6,5 +6,8 @@ name = "terminal"
 delivery = "system"
 delay_seconds = 1
 
+[ui.toast.herdr]
+position = "top-right"
+
 [ui.sound]
 enabled = true

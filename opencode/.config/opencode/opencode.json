@@ -107,6 +107,7 @@
                     "name": "mistralai/ministral-3-14b-reasoning"
                 },
                 "incoai/Qwen3.6-35B-A3B-Splash": {
+                    "name": "incoai/Qwen3.6-35B-A3B-Splash",
                     "limit": {
                         "context": 162816,
                         "output": 16384
@@ -124,9 +125,10 @@
                     }
                 },
                 "incoai/Qwen3.8-27B-Splash": {
+                    "name": "incoai/Qwen3.8-27B-Splash",
                     "limit": {
                         "context": 162816,
-                        "output": 16384
+                        "output": 30000
                     }
                 },
                 "qwen/qwen3.8-27b": {

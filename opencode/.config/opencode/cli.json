@@ -4,13 +4,14 @@
     "name": "system"
   },
   "diffs": {
-    "wrap": "word"
+    "wrap": "word",
+    "fullscreen": false
   },
   "session": {
     "sidebar": "hide",
     "scrollbar": true,
     "thinking": "hide",
-    "verbosity": "medium"
+    "verbosity": "low"
   },
   "animations": true
 }

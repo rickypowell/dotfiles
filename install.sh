@@ -33,6 +33,10 @@ brew install gh
 brew install glab
 # install Ghostty
 brew install --cask ghostty
+# install delta
+brew install git-delta
+# install lazygit
+brew install lazygit
 # install terminal fonts used by Ghostty
 if ! brew list --cask font-blex-mono-nerd-font &> /dev/null; then
     brew install --cask font-blex-mono-nerd-font
@@ -97,6 +101,15 @@ stow --restow opencode
 stow --restow amp
 stow --restow herdr
 stow --restow pi
+# lazygit resolves its config dir with os.UserConfigDir(), which is
+# ~/Library/Application Support/lazygit on macOS unless XDG_CONFIG_HOME is set.
+# Stowing alone is not enough - `export XDG_CONFIG_HOME="$HOME/.config"` must be
+# in ~/.zshrc or lazygit ignores this config. Verify with:
+#   lazygit --print-config-dir
+stow --restow lazygit
+if [[ -z "$XDG_CONFIG_HOME" ]]; then
+    echo "\x1b[1;33mXDG_CONFIG_HOME is unset - lazygit will ignore ~/.config/lazygit. Add 'export XDG_CONFIG_HOME=\"\$HOME/.config\"' to ~/.zshrc.\x1b[0m"
+fi
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then

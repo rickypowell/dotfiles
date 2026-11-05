@@ -1,0 +1,8 @@
+gui:
+  nerdFontsVersion: "3"
+
+git:
+  diffRenderers:
+    - command: delta --{{colorScheme}} --paging=never
+  commit:
+    signOff: false

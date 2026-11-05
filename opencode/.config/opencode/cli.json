@@ -1,17 +1,17 @@
 {
-  "$schema": "https://opencode.ai/v2/cli.json",
-  "theme": {
-    "name": "system"
-  },
-  "diffs": {
-    "wrap": "word",
-    "fullscreen": false
-  },
-  "session": {
-    "sidebar": "hide",
-    "scrollbar": true,
-    "thinking": "hide",
-    "verbosity": "low"
-  },
-  "animations": true
+    "$schema": "https://opencode.ai/v2/cli.json",
+    "theme": {
+        "name": "system"
+    },
+    "diffs": {
+        "wrap": "word",
+        "fullscreen": false
+    },
+    "session": {
+        "sidebar": "hide",
+        "scrollbar": true,
+        "thinking": "hide",
+        "verbosity": "low"
+    },
+    "animations": true
 }

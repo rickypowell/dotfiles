@@ -37,7 +37,7 @@ require("lazy").setup(
 )
 
 -- settings
-vim.cmd.colorscheme("tokyonight-moon")
+-- vim.cmd.colorscheme("tokyonight-moon")
 -- vim.cmd.colorscheme("fluoromachine")
 -- vim.cmd.colorscheme("kanagawa")
 -- vim.cmd.colorscheme("vague")

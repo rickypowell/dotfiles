@@ -10,3 +10,7 @@ rex.bind(prefix("n"), "client.tab.next")
 rex.bind(prefix("p"), "client.tab.previous")
 
 rex.bind(prefix("z"), "pane.zoom")
+rex.bind(prefix("h"), "pane.focus.left")
+rex.bind(prefix("j"), "pane.focus.down")
+rex.bind(prefix("k"), "pane.focus.up")
+rex.bind(prefix("l"), "pane.focus.right")

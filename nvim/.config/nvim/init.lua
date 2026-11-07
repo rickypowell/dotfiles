@@ -47,6 +47,7 @@ require("lazy").setup(
 -- vim.cmd.colorscheme("gruvbox")
 -- vim.cmd.colorscheme("kanagawa-paper-ink")
 -- vim.cmd.colorscheme("nightfox")
+vim.cmd.colorscheme("github_dark")
 -- vim.cmd.colorscheme("github_dark_high_contrast")
 -- vim.cmd.colorscheme("terafox")
 -- vim.cmd.colorscheme("carbonfox")

@@ -101,6 +101,9 @@ stow --restow opencode
 stow --restow amp
 stow --restow herdr
 stow --restow pi
+# Rex is in beta as of 10-29-2026
+# There is not `brew install` as this point in time
+stow --restow rex
 # lazygit resolves its config dir with os.UserConfigDir(), which is
 # ~/Library/Application Support/lazygit on macOS unless XDG_CONFIG_HOME is set.
 # Stowing alone is not enough - `export XDG_CONFIG_HOME="$HOME/.config"` must be

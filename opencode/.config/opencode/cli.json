@@ -13,5 +13,8 @@
         "thinking": "hide",
         "verbosity": "low"
     },
-    "animations": true
+    "animations": true,
+    "tabs": {
+        "mode": "off"
+    }
 }

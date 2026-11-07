@@ -1,6 +1,7 @@
 {
     "$schema": "https://opencode.ai/config.json",
     "autoupdate": true,
+    "model": "lmstudio/incoai/Qwen3.8-27B-Splash",
     "default_agent": "build",
     "small_model": "lmstudio/laguna-xs-2.1-nvfp4-mlx",
     "instructions": [

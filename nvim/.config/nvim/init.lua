@@ -36,6 +36,14 @@ require("lazy").setup(
   }
 )
 
+local system_mode = vim.fn.system("defaults read -g AppleInterfaceStyle")
+if system_mode == "Dark" then
+  -- Apply your dark theme here
+  vim.cmd.colorscheme("github_dark")
+else
+  -- Apply your light theme here
+  vim.cmd.colorscheme("github_light")
+end
 -- settings
 -- vim.cmd.colorscheme("tokyonight-moon")
 -- vim.cmd.colorscheme("fluoromachine")
@@ -47,7 +55,7 @@ require("lazy").setup(
 -- vim.cmd.colorscheme("gruvbox")
 -- vim.cmd.colorscheme("kanagawa-paper-ink")
 -- vim.cmd.colorscheme("nightfox")
-vim.cmd.colorscheme("github_dark")
+-- vim.cmd.colorscheme("github_dark")
 -- vim.cmd.colorscheme("github_dark_high_contrast")
 -- vim.cmd.colorscheme("terafox")
 -- vim.cmd.colorscheme("carbonfox")

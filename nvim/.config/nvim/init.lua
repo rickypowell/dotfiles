@@ -36,13 +36,27 @@ require("lazy").setup(
   }
 )
 
+local light_theme_table = {
+  catppuccin = "catppuccin-latte",
+  github = "github_light",
+  tokyo = "tokyonight-day"
+}
+
+local dark_theme_table = {
+  catppuccin = "catppuccin",
+  github = "github_dark",
+  tokyo = "tokyonight-night"
+}
+
 local system_mode = vim.fn.system("defaults read -g AppleInterfaceStyle")
+-- strip whitespace; possible strings are "Dark\n" or "Light\n"
+system_mode = system_mode:gsub("%s+", "")
 if system_mode == "Dark" then
   -- Apply your dark theme here
-  vim.cmd.colorscheme("github_dark")
+  vim.cmd.colorscheme(dark_theme_table.github)
 else
   -- Apply your light theme here
-  vim.cmd.colorscheme("github_light")
+  vim.cmd.colorscheme(light_theme_table.github)
 end
 -- settings
 -- vim.cmd.colorscheme("tokyonight-moon")

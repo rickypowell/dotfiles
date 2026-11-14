@@ -80,6 +80,8 @@ brew install golang
 brew install herdr
 # install pi coding agent
 brew install pi-coding-agent
+# install Splash engine
+brew install incoai/tap/splash
 
 # macOS only
 if [[ "$OSTYPE" == "darwin"* ]]; then

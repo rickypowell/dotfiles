@@ -26,6 +26,30 @@ return {
 
         sorting_strategy = "ascending",
 
+        -- live_grep does NOT use `find_command` (that option only exists for
+        -- find_files). It builds its ripgrep invocation from `vimgrep_arguments`
+        -- (shared with grep_string), so exclusions belong here.
+        -- `--hidden` lets rg search dot-directories (needed here because the
+        -- configs live under .config), and the negated globs keep .git and
+        -- other noise out of the results.
+        vimgrep_arguments = {
+          "rg",
+          "--color=never",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
+          "--hidden",
+          "--glob=!**/.git/*",
+          "--glob=!**/.idea/*",
+          "--glob=!**/.vscode/*",
+          "--glob=!**/build/*",
+          "--glob=!**/dist/*",
+          "--glob=!**/yarn.lock",
+          "--glob=!**/package-lock.json",
+        },
+
         file_ignore_patterns = {
           -- "^node_modules/",
           -- "^target/",

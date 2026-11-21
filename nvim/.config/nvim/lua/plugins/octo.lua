@@ -1,6 +1,6 @@
 return {
   "pwntester/octo.nvim",
-  enabled = false,
+  enabled = true,
 
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -9,7 +9,7 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
 
-  config = function ()
-    require"octo".setup()
+  config = function()
+    require "octo".setup()
   end
 }

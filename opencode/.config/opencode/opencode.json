@@ -1,94 +1,42 @@
 {
     "$schema": "https://opencode.ai/config.json",
-    "autoupdate": true,
-    "model": "lmstudio/incoai/Qwen3.8-27B-Splash",
+    "model": "omlx/gemma-4-31B-it-oQ4e-mtp",
+    "update": "auto",
     "default_agent": "build",
-    "small_model": "lmstudio/laguna-xs-2.1-nvfp4-mlx",
     "instructions": [
         "rules/herdr-agent-work.md"
     ],
     "mcp": {
-        "xcodebuildmcp": {
-            "type": "local",
-            "command": [
-                "xcodebuildmcp",
-                "mcp"
-            ]
-        },
-        "Xcode": {
-            "type": "local",
-            "command": [
-                "xcrun",
-                "mcpbridge"
-            ]
-        },
-        "axiom": {
-            "type": "local",
-            "command": [
-                "npx",
-                "-y",
-                "axiom-mcp"
-            ]
+        "servers": {
+            "xcodebuildmcp": {
+                "type": "local",
+                "command": [
+                    "xcodebuildmcp",
+                    "mcp"
+                ]
+            },
+            "Xcode": {
+                "type": "local",
+                "command": [
+                    "xcrun",
+                    "mcpbridge"
+                ]
+            },
+            "axiom": {
+                "type": "local",
+                "command": [
+                    "npx",
+                    "-y",
+                    "axiom-mcp"
+                ]
+            }
         }
     },
-    "permission": {
-        "edit": "allow",
-        "glob": "allow",
-        "grep": "allow",
-        "list": "allow",
-        "lsp": "allow",
-        "read": "allow",
-        "bash": {
-            "*": "allow",
-            "awk *": "allow",
-            "brew list *": "allow",
-            "bun *": "allow",
-            "cat *": "allow",
-            "cd *": "allow",
-            "cp *": "allow",
-            "echo *": "allow",
-            "find *": "allow",
-            "gh issue view *": "allow",
-            "gh pr diff *": "allow",
-            "gh pr checks *": "allow",
-            "gh pr view *": "allow",
-            "git *": "allow",
-            "grep *": "allow",
-            "head *": "allow",
-            "herdr *": "allow",
-            "jq *": "allow",
-            "ls *": "allow",
-            "mkdir *": "allow",
-            "mv *": "allow",
-            "node *": "allow",
-            "npm *": "allow",
-            "python3 *": "allow",
-            "rg *": "allow",
-            "sed *": "allow",
-            "tail *": "allow",
-            "touch *": "allow",
-            "wc *": "allow",
-            "which *": "allow",
-            "xcbeautify": "allow",
-            "xcodebuild *": "allow",
-            "xcrun *": "allow",
-            "swiftc *": "allow",
-            "git push *": "ask",
-            "npm install *": "ask",
-            "rm *": "ask"
-        },
-        "webfetch": "allow",
-        "external_directory": {
-            "~/.config/herdr/**": "allow",
-            "/.herdr/**": "allow",
-            "~/.herdr/**": "allow"
-        }
-    },
-    "provider": {
+    "providers": {
         "lmstudio": {
-            "npm": "@ai-sdk/openai-compatible",
             "name": "LM Studio (local)",
-            "options": {
+            "package": "@opencode/ai/providers/openai-compatible",
+            "settings": {
                 "baseURL": "http://127.0.0.1:1234/v1"
             },
             "models": {
@@ -117,12 +65,15 @@
                 "qwen/qwen3.6-35b-a3b": {
                     "name": "qwen/qwen3.6-35b-a3b",
                     "family": "qwen3",
-                    "reasoning": true,
-                    "tool_call": true,
-                    "status": "active",
                     "limit": {
                         "context": 162816,
                         "output": 16384
+                    },
+                    "capabilities": {
+                        "tools": true,
+                        "reasoning": {
+                            "supported": true
+                        }
                     }
                 },
                 "incoai/Qwen3.8-27B-Splash": {
@@ -135,16 +86,19 @@
                 "qwen/qwen3.8-27b": {
                     "name": "qwen/qwen3.8-27b",
                     "family": "qwen3",
-                    "reasoning": true,
-                    "tool_call": true,
-                    "status": "active",
-                    "options": {
-                        "temperature": 0.5,
-                        "topP": 0.95
-                    },
                     "limit": {
                         "context": 90536,
                         "output": 11092
+                    },
+                    "body": {
+                        "temperature": 0.5,
+                        "topP": 0.95
+                    },
+                    "capabilities": {
+                        "tools": true,
+                        "reasoning": {
+                            "supported": true
+                        }
                     }
                 },
                 "qwen/qwen2.5-coder-14b": {
@@ -177,9 +131,9 @@
             }
         },
         "ollama": {
-            "npm": "@ai-sdk/openai-compatible",
             "name": "Ollama",
-            "options": {
+            "package": "@opencode/ai/providers/openai-compatible",
+            "settings": {
                 "baseURL": "http://localhost:11434/v1"
             },
             "models": {
@@ -190,6 +144,284 @@
                     "name": "ministral-3:14b"
                 }
             }
+        },
+        "omlx": {
+            "name": "oMLX",
+            "package": "@opencode/ai/providers/openai-compatible",
+            "settings": {
+                "baseURL": "http://127.0.0.1:8000/v1",
+                "apiKey": "abcd"
+            },
+            "models": {
+                "Laguna-XS.2-4bit": {
+                    "name": "Laguna-XS.2-4bit",
+                    "capabilities": {
+                        "input": [
+                            "text"
+                        ],
+                        "output": [
+                            "text"
+                        ]
+                    },
+                    "limit": {
+                        "context": 262144,
+                        "output": 32768
+                    }
+                },
+                "gemma-4-31B-it-oQ4e-mtp": {
+                    "name": "gemma-4-31B-it-oQ4e-mtp",
+                    "capabilities": {
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "output": [
+                            "text"
+                        ]
+                    },
+                    "limit": {
+                        "context": 262144,
+                        "output": 32768
+                    }
+                }
+            }
         }
-    }
+    },
+    "permissions": [
+        {
+            "action": "edit",
+            "resource": "*",
+            "effect": "allow"
+        },
+        {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+        },
+        {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+        },
+        {
+            "action": "list",
+            "resource": "*",
+            "effect": "allow"
+        },
+        {
+            "action": "lsp",
+            "resource": "*",
+            "effect": "allow"
+        },
+        {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "*",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "awk *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "brew list *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "bun *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "cat *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "cd *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "cp *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "echo *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "find *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "gh issue view *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "gh pr diff *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "gh pr checks *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "gh pr view *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "git *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "grep *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "head *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "herdr *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "jq *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "ls *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "mkdir *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "mv *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "node *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "npm *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "python3 *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "rg *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "sed *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "tail *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "touch *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "wc *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "which *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "xcbeautify",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "xcodebuild *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "xcrun *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "swiftc *",
+            "effect": "allow"
+        },
+        {
+            "action": "shell",
+            "resource": "git push *",
+            "effect": "ask"
+        },
+        {
+            "action": "shell",
+            "resource": "npm install *",
+            "effect": "ask"
+        },
+        {
+            "action": "shell",
+            "resource": "rm *",
+            "effect": "ask"
+        },
+        {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+        },
+        {
+            "action": "external_directory",
+            "resource": "~/.config/herdr/**",
+            "effect": "allow"
+        },
+        {
+            "action": "external_directory",
+            "resource": "/.herdr/**",
+            "effect": "allow"
+        },
+        {
+            "action": "external_directory",
+            "resource": "~/.herdr/**",
+            "effect": "allow"
+        }
+    ]
 }

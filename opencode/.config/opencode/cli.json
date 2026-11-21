@@ -10,7 +10,7 @@
     "session": {
         "sidebar": "hide",
         "scrollbar": true,
-        "thinking": "hide",
+        "thinking": "show",
         "verbosity": "low"
     },
     "animations": true,
